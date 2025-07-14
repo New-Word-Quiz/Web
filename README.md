@@ -28,16 +28,7 @@
 ### 🌳 브랜치 전략 및 협업 프로세스
 - `main`: 최종 결과물
 - `develop`: 개발 통합 브랜치
-- `web`, `backend`: 분야별 개발 브랜치
-- `issue 이슈번호`: 세부 기능 개발 브랜치, 각 기능별로 Github issue를 생성해서 관리 (예: `issue/#2`, `issue/#4`, `feat/#2`등)
----
-### 🔀 작업 흐름
-1. 파트별로 원격 브랜치 연결 후, pull 받은 뒤 동기화 후 시작
-2. 웹 파트는 `web` 브랜치 생성 후 pull 받은 폴더에서 `web` 폴더 생성 후 작업
-3. 각 기능은 `issue 이슈번호` 브랜치에서 개발
-4. 기능 개발 완료 후 `web` 브랜치로 pull request + merge (각자 코드 리뷰 필수)
-5. 파트별 프로젝트 완성 후, `develop`브랜치로 merge
-6. 최종본 `main`브랜치에 반영
+- `issue/#1_Home`, `issue/#5_QuizCard`, `issue/#9_ScoreScreen`...: 세부 기능 개발 브랜치, 각 기능별로 Github issue를 생성해서 관리
 ---
 ### 🙋‍♀️ 협업 Tip
 - 항상 pull 받아서 동기화
