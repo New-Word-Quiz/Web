@@ -79,7 +79,7 @@
 /* --- 5. 개별 버튼 스타일 --- */
 .start-button {
   background-color: #f7e657; /* 노란색 */
-  color: #333;
+  color: white;
 }
 
 .setting-button {
@@ -155,4 +155,12 @@
   .sub-button-group {
     gap: 8px; /* 더 작은 휴대폰에서 간격 더 줄임 */
   }
+}
+.start-button-group a,
+.sub-button-group a {
+  text-decoration: none; /* 밑줄 제거 */
+  color: inherit;        /* 부모의 글자색 상속 (버튼 글자색 유지) */
+  /* display: flex;         /* Link가 flex 아이템처럼 동작하도록 */
+  /* justify-content: center; */ /* Link 내부의 버튼을 중앙 정렬 */
+  /* align-items: center; */
 }
