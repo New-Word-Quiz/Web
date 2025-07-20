@@ -1,0 +1,121 @@
+/* 뷰 포트는 흰 배경 유지 */
+.settings-page-view {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFF;
+}
+
+/* 모바일 프레임: 파란 배경만 폰 크기로 적용 */
+.phone-frame {
+  width: 100%;
+  max-width: 375px;
+  aspect-ratio: 375 / 812;
+  background-color: #E1F7FF;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 카드 컨테이너 */
+.settings-card {
+  width: 90%;
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card-header {
+  position: relative;
+  height: 56px;
+}
+.back-btn {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+.card-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.card-content {
+  padding: 16px;
+  background: #fff;
+  flex: 1;
+}
+.setting-group {
+  margin-bottom: 32px;
+}
+.setting-label {
+  margin-bottom: 8px;
+  display: block;
+  font-size: 14px;
+  color: #333;
+}
+
+.setting-range {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: #DDD;
+  outline: none;
+  --value: 50%;
+}
+.setting-range.bgm { background: linear-gradient(to right, #007AFF var(--value), #DDD var(--value)); }
+.setting-range.effect { background: linear-gradient(to right, #6200EE var(--value), #DDD var(--value)); }
+.setting-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #EEE;
+  border: 2px solid transparent;
+  cursor: pointer;
+  margin-top: -6px;
+}
+.setting-range.bgm::-webkit-slider-thumb { border-color: #007AFF; }
+.setting-range.effect::-webkit-slider-thumb { border-color: #6200EE; }
+.setting-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #EEE;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+.setting-range.bgm::-moz-range-thumb { border-color: #007AFF; }
+.setting-range.effect::-moz-range-thumb { border-color: #6200EE; }
+
+.card-footer {
+  padding: 16px;
+  background: #fff;
+}
+.inquiry-btn {
+  width: 100%;
+  padding: 14px 0;
+  background: #007AFF;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
