@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import './scorescreen.css';
-import 만점이미지 from './image/만점이요.png';
+import 만점이미지 from '../image/만점이요.png';
+import Star from '../image/Star.png';
 
 
 
 function Scorescreen() {
    return (
       <>
-         <div id="user-name"> 플레이어님!</div>
+         <div id="name-id"> 플레이어님!</div>
 
          <div id="mention"> 참 잘 했어요</div>
          <div id="now-score"> 100</div>
@@ -31,12 +32,12 @@ function Scorescreen() {
       <div className="back-rectangle" />
 
       {/* 큰 별 2개 */}
-      <div className="star star--big-tr" />
-      <div className="star star--big-bl" />
+      <image src={Star} className="star star--big-tr" alt="큰 별" />
+      <image src={Star} className="star star--big-bl" alt="큰 별"/>
       {/* 작은 별 3개 (각각 다른 클래스명으로 CSS에서 개별 위치 조정을 용이하게 함) */}
-      <div className="star star--small star--small-1" />
-      <div className="star star--small star--small-2" />
-      <div className="star star--small star--small-3" />
+      <image src={Star} className="star star--small star--small-1" alt="작은 별"/>
+      <image src={Star} className="star star--small star--small-2" alt="작은 별"/>
+      <image src={Star} className="star star--small star--small-3" alt=" 별"/>
       </>
    )
 }

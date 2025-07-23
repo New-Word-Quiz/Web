@@ -6,8 +6,6 @@ html,body {
    overflow: hidden;    /* 가로 세로 스크롤 방지 */
 }
 
-
-
 #name-id {
    position: absolute;
    z-index: 10;
@@ -113,7 +111,7 @@ html,body {
 
 .image{
    position: absolute;
-   z-index: 10;
+   z-index: 999;
    width: 280px;
    height: 280px;
    top: 365px;
