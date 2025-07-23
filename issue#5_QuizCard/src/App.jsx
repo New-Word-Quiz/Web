@@ -2,10 +2,10 @@
 import React, { useState } from 'react';
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import quizData from './data/quizData';
-import QuizCard from './components/QuizCard';
-import AnswerScreen from './components/AnswerScreen';
-import AnswerExplain from './components/AnswerExplain';
-import HelpScreen from './components/HelpScreen';
+import QuizCard from './QuizCards/QuizCard';
+import AnswerScreen from './QuizCards/AnswerScreen';
+import AnswerExplain from './QuizCards/AnswerExplain';
+import HelpScreen from './QuizCards/HelpScreen';
 
 // 배열 셔플 함수
 function shuffleArray(array) {
