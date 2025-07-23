@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/New-Word-Quiz/Web/issues"
   },
-  "homepage": "https://github.com/New-Word-Quiz/Web#readme"
+  "homepage": "https://github.com/New-Word-Quiz/Web#readme",
+  "dependencies": {
+    "react-router-dom": "^7.7.0"
+  }
 }
