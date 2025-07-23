@@ -6,6 +6,12 @@ import Star from '../image/Star.png';
 
 
 function Scorescreen() {
+   const navigate = userNavigate();
+
+   const handleRetryClick = () => {
+      //console.log('다시하기 버튼 클릭')
+      navigate('/game');
+   }
    return (
       <>
          <div id="name-id"> 플레이어님!</div>
@@ -16,15 +22,15 @@ function Scorescreen() {
 
          <img id="image" src={만점이미지} />
 
-         <div className="retry-button">
+         <div className="retry-button" onClick={handleRetryClick}>
          <span>다시하기</span>
          </div>
 
-         <div className="home-button">
+         <div className="home-button" onClick={handleHomeClick}>
          <span>홈</span>
          </div>
 
-         <div className="setting-button">
+         <div className="setting-button" onClick={handleSettingClick}>
          <span>설정</span>
          </div>
 
