@@ -67,3 +67,61 @@
   transform: scale(0.96);
   box-shadow: none;
 }
+
+/* --- 7. 반응형 설정 --- */
+@media (max-width: 768px) {
+  .explain-card {
+    width: 90%;
+    padding: 16px;
+  }
+
+  .explain-title {
+    font-size: 22px;
+  }
+
+  .explain-option {
+    font-size: 17px;
+    margin-left: 8px;
+  }
+
+  .explain-bubble {
+    font-size: 15px;
+    padding: 12px;
+    border-radius: 16px;
+    max-width: 95%;
+  }
+
+  .btn-back {
+    font-size: 16px;
+    padding: 9px 18px;
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .explain-card {
+    width: 95%;
+    padding: 14px;
+  }
+
+  .explain-title {
+    font-size: 20px;
+  }
+
+  .explain-option {
+    font-size: 16px;
+    margin-left: 6px;
+  }
+
+  .explain-bubble {
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 14px;
+    max-width: 100%;
+  }
+
+  .btn-back {
+    font-size: 15px;
+    padding: 8px 16px;
+  }
+}

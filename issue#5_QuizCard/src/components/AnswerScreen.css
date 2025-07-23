@@ -137,3 +137,93 @@
 .btn.explain {
   background-color: #82C75E;
 }
+
+/* --- 7. 반응형 설정 --- */
+@media (max-width: 768px) {
+  .answer-card {
+    width: 90%;
+    height: auto;
+    padding: 16px;
+  }
+
+  .ox-symbol {
+    font-size: 60px;
+  }
+
+  .result-text {
+    font-size: 20px;
+  }
+
+  .quiz-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .answer-label {
+    font-size: 18px;
+  }
+
+  .answer-text {
+    font-size: 26px;
+  }
+
+  .section-title {
+    font-size: 18px;
+  }
+
+  .section-box {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .btn {
+    width: 70px;
+    height: 42px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .answer-card {
+    width: 95%;
+    height: auto;
+    padding: 14px;
+  }
+
+  .ox-symbol {
+    font-size: 52px;
+  }
+
+  .result-text {
+    font-size: 18px;
+  }
+
+  .quiz-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .answer-label {
+    font-size: 16px;
+  }
+
+  .answer-text {
+    font-size: 24px;
+  }
+
+  .section-title {
+    font-size: 16px;
+  }
+
+  .section-box {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .btn {
+    width: 65px;
+    height: 40px;
+    font-size: 15px;
+  }
+}
+

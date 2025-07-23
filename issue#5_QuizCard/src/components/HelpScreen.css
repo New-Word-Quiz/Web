@@ -61,3 +61,69 @@
   color: black;
   box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
+
+@media (max-width: 768px) {
+  .help-card {
+    width: 90%;
+    padding: 16px;
+  }
+
+  .help-title {
+    font-size: 20px;
+  }
+
+  .help-image {
+    width: 130px;
+    height: 130px;
+    border-radius: 16px;
+    margin: 8px auto;
+  }
+
+  .section-title {
+    font-size: 18px;
+    margin-top: 14px;
+  }
+
+  .section-box {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .btn-back {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .help-card {
+    width: 95%;
+    padding: 14px;
+  }
+
+  .help-title {
+    font-size: 18px;
+  }
+
+  .help-image {
+    width: 110px;
+    height: 110px;
+    border-radius: 14px;
+    margin: 6px auto;
+  }
+
+  .section-title {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+
+  .section-box {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .btn-back {
+    font-size: 14px;
+    padding: 7px 14px;
+  }
+}
