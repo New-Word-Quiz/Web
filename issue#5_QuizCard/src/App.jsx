@@ -7,12 +7,25 @@ import AnswerScreen from './components/AnswerScreen';
 import AnswerExplain from './components/AnswerExplain';
 import HelpScreen from './components/HelpScreen';
 
+// 배열 셔플 함수
+function shuffleArray(array) {
+  const newArr = [...array];
+  for (let i = newArr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
+  }
+  return newArr;
+}
+
 function QuizFlow() {
-  const [step, setStep] = useState(0);
-  const [selected, setSelected] = useState('');
   const navigate = useNavigate();
 
-  const currentQuiz = quizData[step];
+  // 처음 로딩 시 문제를 랜덤으로 섞기
+  const [quizPool, setQuizPool] = useState(() => shuffleArray(quizData));
+  const [step, setStep] = useState(0);
+  const [selected, setSelected] = useState('');
+
+  const currentQuiz = quizPool[step];
 
   const handleAnswer = (option) => {
     setSelected(option);
@@ -20,9 +33,10 @@ function QuizFlow() {
   };
 
   const handleNext = () => {
-    const isLast = step === quizData.length - 1;
+    const isLast = step === quizPool.length - 1;
     if (isLast) {
       alert('퀴즈가 모두 끝났습니다!');
+      setQuizPool(shuffleArray(quizData)); // 퀴즈 다시 셔플
       setStep(0);
       setSelected('');
       navigate('/quiz');
@@ -76,7 +90,7 @@ function QuizFlow() {
         element={
           <HelpScreen
             quiz={currentQuiz}
-            onBack={() => navigate('/quiz')} // 여기가 핵심
+            onBack={() => navigate('/quiz')}
           />
         }
       />
