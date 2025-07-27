@@ -1,17 +1,21 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  background-color: #E1F7FF;
+}
 /* iPhone 가로 최대 375px, 세로 100vh */
 .inquiry-wrapper {
   width: 100%;
   max-width: 375px;
   height: 100vh;
   margin: 0 auto;
-  background-color: #e5f6fd;
+  background-color: #E1F7FF;
   padding: 16px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .inquiry-card {
   position: relative;
   width: 100%;
@@ -53,4 +57,26 @@
   font-size: 18px;
   font-weight: 700;
   text-decoration: underline;
+}
+
+
+/* InquiryPage.css 끝에 추가 */
+@media (max-width: 768px) {
+  .inquiry-wrapper {
+    width: 95%;
+    padding: 15px;
+  }
+  .inquiry-card {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .inquiry-wrapper {
+    width: 90%;
+    padding: 10px;
+  }
+  .inquiry-card {
+    max-width: 200px;
+  }
 }

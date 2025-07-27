@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
-import SettingsPage from './components/SettingsPage.jsx'
-import InquiryPage  from './components/InquiryPage.jsx'
+import SettingsPage from './Setting-Inquiry/SettingsPage.jsx'
+import InquiryPage  from './Setting-Inquiry/InquiryPage.jsx'
 
 function App() {
   return (

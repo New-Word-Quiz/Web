@@ -2,7 +2,7 @@ import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import { SettingsProvider } from './contexts/SettingsContext.jsx'
-import BgmPlayer from './components/BgmPlayer.jsx'
+import BgmPlayer from './Setting-Inquiry/BgmPlayer.jsx'
 import App from './App.jsx'
 import './index.css'
 
