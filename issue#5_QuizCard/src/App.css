@@ -1,47 +1,45 @@
+/* 메인 배경 이미지 설정 */
 .main-bg {
-  height: 300px;
-  background-image: url(./img/bg.png);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 300px; /* 세로 높이 */
+  background-image: url(./img/bg.png); /* 배경 이미지 경로 */
+  background-size: contain; /* 이미지가 요소 안에 들어오도록 크기 조절 */
+  background-position: center; /* 가운데 정렬 */
+  background-repeat: no-repeat; /* 반복하지 않음 */
 }
 
-
+/* 전체 앱 텍스트 중앙 정렬 */
 .App {
   text-align: center;
 }
 
+/* React 로고에 사용할 기본 크기 지정 */
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 40vmin; /* 뷰포트 크기의 40% */
+  pointer-events: none; /* 마우스 이벤트 제거 */
 }
 
+/* 모션을 허용하는 사용자 설정일 경우 애니메이션 실행 */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 20s linear; /* 20초 동안 무한 회전 */
   }
 }
 
+/* 앱 헤더 스타일 */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #282c34; /* 어두운 배경색 */
+  min-height: 100vh; /* 화면 전체 높이 채움 */
+  display: flex; /* Flexbox로 정렬 */
+  flex-direction: column; /* 세로 정렬 */
+  align-items: center; /* 가로 중앙 정렬 */
+  justify-content: center; /* 세로 중앙 정렬 */
+  font-size: calc(10px + 2vmin); /* 화면 크기에 따라 반응형 글자 크기 */
+  color: white; /* 글자 색상 */
 }
 
+/* 링크 색상 지정 */
 .App-link {
-  color: #61dafb;
+  color: #61dafb; /* 밝은 파란색 */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+

@@ -1,45 +1,49 @@
-/* HelpScreen.css */
+/* 전체 도움말 화면 컨테이너 */
 .help-container {
-  min-height: 100vh;
-  background-color: #6BC2DA;
-  display: flex;
+  min-height: 100vh; /* 전체 화면 높이 확보 */
+  background-color: #6BC2DA; /* 배경색 (하늘색) */
+  display: flex; /* 가운데 정렬 위한 Flexbox 사용 */
   justify-content: center;
   align-items: center;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif; /* 한글 폰트 */
 }
 
+/* 카드 스타일 (도움말 박스) */
 .help-card {
   width: 355px;
   background-color: white;
-  border-radius: 15px;
+  border-radius: 15px; /* 둥근 테두리 */
   padding: 20px;
   text-align: center;
 }
 
+/* "도움말" 제목 텍스트 */
 .help-title {
   font-size: 24px;
   font-weight: 900;
   margin-bottom: 12px;
 }
 
+/* 퀴즈 이미지 스타일 */
 .help-image {
   width: 150px;
   height: 150px;
-  object-fit: cover;
+  object-fit: cover; /* 이미지 비율 유지하며 자르기 */
   border-radius: 20px;
   margin: 10px auto;
   display: block;
 }
 
-
+/* "의미", "예시" 섹션 제목 */
 .section-title {
   font-size: 20px;
   font-weight: 800;
   margin-top: 16px;
 }
 
+/* 의미 및 예시 내용 박스 */
 .section-box {
-  background-color: #D5E3F0;
+  background-color: #D5E3F0; /* 연한 파란색 배경 */
   padding: 14px;
   margin-top: 6px;
   border-radius: 20px;
@@ -49,6 +53,7 @@
   line-height: 1.6;
 }
 
+/* "뒤로가기" 버튼 스타일 */
 .btn-back {
   margin-top: 20px;
   background-color: #70B7F1;
@@ -62,9 +67,10 @@
   box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
+/* ----------- 반응형 설정 (태블릿 이하) ----------- */
 @media (max-width: 768px) {
   .help-card {
-    width: 90%;
+    width: 90%; /* 더 넓게 보이도록 */
     padding: 16px;
   }
 
@@ -95,6 +101,7 @@
   }
 }
 
+/* ----------- 반응형 설정 (모바일 기준) ----------- */
 @media (max-width: 480px) {
   .help-card {
     width: 95%;

@@ -1,24 +1,25 @@
 // src/data/quizData.js
 const quizData = [
   {
-    id: 1,
-    image: '/images/quiz1.png',
-    question: '그림이 설명하는 신조어는?',
-    options: ['점메추', '혼밥', '밥터디', '밥약'],
-    answer: '점메추',
-    meaning: '“점심 메뉴 추천”의 줄임말\n점심메뉴를 추천해 달라고 할 때 쓰이는 표현',
-    example: '“오늘 점심으로 뭘 먹을까?\n점메추 좀 해줘”',
-    explanations: [
+    id: 1, // 퀴즈 고유 ID
+    image: '/images/quiz1.png', // 퀴즈에 사용될 이미지 경로
+    // 참고로 이미지 파일은 src 폴더 말고 public 폴더에 있음
+    question: '그림이 설명하는 신조어는?', // 퀴즈 질문
+    options: ['점메추', '혼밥', '밥터디', '밥약'], // 보기 항목들
+    answer: '점메추', // 정답
+    meaning: '“점심 메뉴 추천”의 줄임말\n점심메뉴를 추천해 달라고 할 때 쓰이는 표현', // 정답 단어의 의미
+    example: '“오늘 점심으로 뭘 먹을까?\n점메추 좀 해줘”', // 정답 단어를 사용하는 예시 문장
+    explanations: [ // 보기마다의 해설 (보기 순서대로)
       '점심 메뉴 추천의 줄임말',
       '혼자 밥을 먹는 사람들을 지칭하는 신조어',
       '함께 밥을 먹을 사람들을 모아서 밥을 먹는 모임',
       '밥을 함께 먹자는 약속을 뜻하는 신조어',
     ],
   },
-  // 다른 문제도 같은 방식으로...
+  // 아래 항목들은 동일한 구조이므로 반복 주석 생략
   {
     id: 2,
-    image: '/images/quiz2.png', // public/images 폴더에 넣기
+    image: '/images/quiz2.png', 
     question: '그림이 설명하는 신조어는?',
     options: ['넥슨넥카엔', '네카라쿠베당토', '빅테삼', '삼엘하'],
     answer: '네카라쿠베당토',
@@ -34,7 +35,7 @@ const quizData = [
 
   {
   id: 3,
-  image: '/images/quiz3.png', // 킹받은 표정의 이미지 사용
+  image: '/images/quiz3.png', 
   question: '그림이 설명하는 신조어는?',
   options: ['킹받네', '현타', '억까', '멘붕'],
   answer: '킹받네',
@@ -50,7 +51,7 @@ const quizData = [
 
 {
   id: 4,
-  image: '/images/quiz4.png', // 실망하거나 찌푸린 표정, 선물 받고도 기뻐하지 않는 모습 등
+  image: '/images/quiz4.png', 
   question: '그림이 설명하는 신조어는?',
   options: ['구질구질하다', '촌스럽다', '구리다', '짜치다'],
   answer: '짜치다',
@@ -82,7 +83,7 @@ const quizData = [
 
 {
   id: 6,
-  image: '/images/quiz6.png', // 어색한 분위기, 조용한 사람들, 정적 등의 이미지를 추천
+  image: '/images/quiz6.png', 
   question: '그림이 설명하는 신조어는?',
   options: ['갑분싸', '갑툭튀', '현타', '멘붕'],
   answer: '갑분싸',
@@ -98,7 +99,7 @@ const quizData = [
 
 {
   id: 7,
-  image: '/images/quiz7.png', // 멋지게 옷 입은 사람, 거리 패션, 거울 셀카 등 패션 관련 이미지 추천
+  image: '/images/quiz7.png', 
   question: '그림이 설명하는 신조어는?',
   options: ['패피', '얼죽코', '꾸안꾸', '슬세권'],
   answer: '패피',
@@ -114,7 +115,7 @@ const quizData = [
 
 {
   id: 8,
-  image: '/images/quiz8.png', // 진심으로 신난 표정, 감정 폭발 장면 이미지
+  image: '/images/quiz8.png', 
   question: '그림이 설명하는 신조어는?',
   options: ['찐텐', '오열', '억까', '현타'],
   answer: '찐텐',
@@ -130,7 +131,7 @@ const quizData = [
 
 {
   id: 9,
-  image: '/images/quiz9.png', // 오래된 댓글에 사람들이 몰리는 장면이나 핫한 게시글
+  image: '/images/quiz9.png', 
   question: '그림이 설명하는 신조어는?',
   options: ['댓글부대', '성지순례', '급발진', '드립'],
   answer: '성지순례',
@@ -146,7 +147,7 @@ const quizData = [
 
 {
   id: 10,
-  image: '/images/quiz10.png', // 웃음을 참다 빵 터진 사람 일러스트 등
+  image: '/images/quiz10.png', 
   question: '그림이 설명하는 신조어는?',
   options: ['현웃', '팩폭', '노잼', '뇌절'],
   answer: '현웃',
@@ -162,7 +163,7 @@ const quizData = [
 
 {
   id: 11,
-  image: '/images/quiz11.png', // 약속 없는 날 외출 준비하는 모습, 꾸민 사람
+  image: '/images/quiz11.png', 
   question: '그림이 설명하는 신조어는?',
   options: ['내또출', '혼코노', '혼밥', '이생망'],
   answer: '내또출',
@@ -178,7 +179,7 @@ const quizData = [
 
 {
   id: 12,
-  image: '/images/quiz12.png', // 고급지고 윤기 나는 음식, 미식 콘텐츠 느낌
+  image: '/images/quiz12.png',
   question: '그림이 설명하는 신조어는?',
   options: ['푸드파이터', '소울푸드', 'Sexy Food', '음잘알'],
   answer: 'Sexy Food',
@@ -194,7 +195,7 @@ const quizData = [
 
 {
   id: 13,
-  image: '/images/quiz13.png', // 모든 사람이 따라야 하는 규칙, 당연한 행동을 묘사한 이미지
+  image: '/images/quiz13.png', 
   question: '그림이 설명하는 신조어는?',
   options: ['국룰', '암묵적 룰', '노룰', '선넘'],
   answer: '국룰',
@@ -210,7 +211,7 @@ const quizData = [
 
 {
   id: 14,
-  image: '/images/quiz14.png', // 분위기 파악 못하고 끼는 사람, 또는 빠져야 할 타이밍
+  image: '/images/quiz14.png', 
   question: '그림이 설명하는 신조어는?',
   options: ['낄끼빠빠', '눈치게임', '존버', '손절'],
   answer: '낄끼빠빠',
@@ -226,7 +227,7 @@ const quizData = [
 
 {
   id: 15,
-  image: '/images/quiz15.png', // 높은 벽 이미지, 격차가 큰 비교 장면
+  image: '/images/quiz15.png', 
   question: '그림이 설명하는 신조어는?',
   options: ['넘사벽', '압도적', '갓생', '갑질'],
   answer: '넘사벽',
@@ -242,7 +243,7 @@ const quizData = [
 
 {
   id: 16,
-  image: '/images/quiz16.png', // 놀람, 충격, 어이 없음 등 과장된 표정 일러스트
+  image: '/images/quiz16.png', 
   question: '그림이 설명하는 신조어는?',
   options: ['머선129', '오우야', '헐', '빼박캔트'],
   answer: '머선129',
@@ -258,7 +259,7 @@ const quizData = [
 
 {
   id: 17,
-  image: '/images/quiz17.png', // 자연스럽지만 멋진 스타일링 예시 이미지
+  image: '/images/quiz17.png', 
   question: '그림이 설명하는 신조어는?',
   options: ['꾸안꾸', '얼죽코', '패피', '슬세권'],
   answer: '꾸안꾸',
@@ -275,7 +276,7 @@ const quizData = [
 
 {
   id: 18,
-  image: '/images/quiz18.png', // 혼자 상상하는 사람, 추측하는 모습 등
+  image: '/images/quiz18.png', 
   question: '그림이 설명하는 신조어는?',
   options: ['썰', '뇌피셜', '팩폭', '사바사'],
   answer: '뇌피셜',
@@ -292,7 +293,7 @@ const quizData = [
 
 {
   id: 19,
-  image: '/images/quiz19.png', // 처음엔 무덤덤, 점점 마음이 가는 상황 묘사
+  image: '/images/quiz19.png', 
   question: '그림이 설명하는 신조어는?',
   options: ['느좋', '반반무많이', '킹정', '스불재'],
   answer: '느좋',
@@ -309,7 +310,7 @@ const quizData = [
 
 {
   id: 20,
-  image: '/images/quiz20.png', // 솔직하게 말하는 사람, 직설적인 상황 묘사
+  image: '/images/quiz20.png', 
   question: '그림이 설명하는 신조어는?',
   options: ['솔까말', '팩폭', '쌉가능', '노잼'],
   answer: '솔까말',

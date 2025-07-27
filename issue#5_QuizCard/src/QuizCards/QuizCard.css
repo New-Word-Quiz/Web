@@ -1,3 +1,4 @@
+/* 전체 퀴즈 화면을 감싸는 컨테이너 */
 .quiz-container {
   min-height: 100vh;
   background-color: #6BC2DA;
@@ -8,6 +9,7 @@
   box-sizing: border-box;
 }
 
+/* 퀴즈 카드 박스 */
 .quiz-card {
   width: 355px;
   height: 550px;
@@ -20,18 +22,21 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* 문제 제목 */
 .quiz-title {
   font-weight: 900;
   font-size: 18px;
   margin-bottom: 4px;
 }
 
+/* 부제목 또는 설명 */
 .quiz-subtitle {
   font-size: 16px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
+/* 문제 이미지 */
 .quiz-image {
   width: 100%;
   max-width: 280px;
@@ -41,13 +46,14 @@
   display: block;
 }
 
+/* 선택지 영역을 세로로 정렬 */
 .quiz-options {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-/* 옵션 버튼 공통 스타일 */
+/* 공통 옵션 버튼 스타일 */
 .option-button {
   transition: all 0.1s ease-in-out;  /* 클릭 애니메이션 추가 */
   display: flex;
@@ -64,13 +70,13 @@
   gap: 10px;
 }
 
-/* 클릭 시 눌리는 효과 */
+/* 클릭 시 버튼이 살짝 눌린 듯한 효과 */
 .option-button:active {
   transform: scale(0.97);
   box-shadow: none;
 }
 
-/* 색상별 버튼 배경 */
+/* 선택지 색상 (보기마다 다르게 설정 가능) */
 .pink {
   background-color: #f7c3c3;
 }
@@ -84,6 +90,7 @@
   background-color: #c7f7c7;
 }
 
+/* 보기 왼쪽의 동그라미 (라디오 버튼 느낌) */
 .radio-circle {
   width: 18px;
   height: 18px;
@@ -92,15 +99,18 @@
   background-color: white;
 }
 
+/* 보기 텍스트 */
 .option-text {
   font-weight: bold;
 }
 
+/* 도움말 버튼 컨테이너 (우측 정렬) */
 .help-button-container {
   margin-top: 20px;
   text-align: right;
 }
 
+/* 도움말 버튼 스타일 */
 .btn-help {
   background-color: #f4cf48;
   color: black;
@@ -114,11 +124,13 @@
   transition: all 0.1s ease-in-out;
 }
 
+/* 도움말 버튼 클릭 시 눌리는 효과 */
 .btn-help:active {
   transform: scale(0.96);
   box-shadow: none;
 }
 
+/* --- 반응형: 태블릿 이하 화면 대응 --- */
 @media (max-width: 768px) {
   .quiz-card {
     width: 90%;
@@ -155,6 +167,7 @@
   }
 }
 
+/* --- 반응형: 모바일 (480px 이하) --- */
 @media (max-width: 480px) {
   .quiz-card {
     width: 95%;

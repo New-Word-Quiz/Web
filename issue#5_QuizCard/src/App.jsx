@@ -1,69 +1,37 @@
 // src/App.jsx
-import React, { useState } from 'react';
-import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
-import quizData from './data/quizData';
+import React from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+
+// 컴포넌트 import
 import QuizCard from './QuizCards/QuizCard';
 import AnswerScreen from './QuizCards/AnswerScreen';
 import AnswerExplain from './QuizCards/AnswerExplain';
 import HelpScreen from './QuizCards/HelpScreen';
 
-// 배열 셔플 함수
-function shuffleArray(array) {
-  const newArr = [...array];
-  for (let i = newArr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [newArr[i], newArr[j]] = [newArr[j], newArr[i]];
-  }
-  return newArr;
-}
+// 퀴즈 흐름 로직을 관리하는 커스텀 훅 import
+import { useQuizFlow } from './hooks/useQuizFlow';
 
 function QuizFlow() {
-  const navigate = useNavigate();
-
-  // 처음 로딩 시 문제를 랜덤으로 섞기
-  const [quizPool, setQuizPool] = useState(() => shuffleArray(quizData));
-  const [step, setStep] = useState(0);
-  const [selected, setSelected] = useState('');
-
-  const currentQuiz = quizPool[step];
-
-  const handleAnswer = (option) => {
-    setSelected(option);
-    navigate('/answer');
-  };
-
-  const handleNext = () => {
-    const isLast = step === quizPool.length - 1;
-    if (isLast) {
-      alert('퀴즈가 모두 끝났습니다!');
-      setQuizPool(shuffleArray(quizData)); // 퀴즈 다시 셔플
-      setStep(0);
-      setSelected('');
-      navigate('/quiz');
-    } else {
-      setStep(step + 1);
-      setSelected('');
-      navigate('/quiz');
-    }
-  };
-
-  const handleHome = () => {
-    setStep(0);
-    setSelected('');
-    navigate('/quiz');
-  };
+  // 커스텀 훅에서 퀴즈 상태 및 핸들러 함수들을 가져옴
+  const {
+    currentQuiz,    // 현재 퀴즈 객체
+    selected,       // 사용자가 선택한 보기
+    handleAnswer,   // 보기 선택 시 처리 함수
+    handleNext,     // 다음 문제로 이동 함수
+    handleHome,     // 홈(처음)으로 돌아가는 함수
+    handleExplain,  // 해설 화면으로 이동 함수
+    handleHelp,     // 도움말 화면으로 이동 함수 (현재 미사용이지만 필요시 확장 가능)
+  } = useQuizFlow();
 
   return (
     <Routes>
+      {/* 퀴즈 풀이 화면 */}
       <Route
         path="/quiz"
-        element={
-          <QuizCard
-            quiz={currentQuiz}
-            onAnswer={handleAnswer}
-          />
-        }
+        element={<QuizCard quiz={currentQuiz} onAnswer={handleAnswer} />}
       />
+
+      {/* 정오답 확인 화면 */}
       <Route
         path="/answer"
         element={
@@ -72,28 +40,24 @@ function QuizFlow() {
             selected={selected}
             onNext={handleNext}
             onHome={handleHome}
-            onExplain={() => navigate('/explain')}
+            onExplain={handleExplain}
           />
         }
       />
+
+      {/* 해설 보기 화면 */}
       <Route
         path="/explain"
-        element={
-          <AnswerExplain
-            quiz={currentQuiz}
-            onBack={() => navigate('/answer')}
-          />
-        }
+        element={<AnswerExplain quiz={currentQuiz} onBack={() => window.history.back()} />}
       />
+
+      {/* 도움말 화면 */}
       <Route
         path="/help"
-        element={
-          <HelpScreen
-            quiz={currentQuiz}
-            onBack={() => navigate('/quiz')}
-          />
-        }
+        element={<HelpScreen quiz={currentQuiz} onBack={handleHome} />}
       />
+
+      {/* 기본 경로 또는 잘못된 경로 접근 시 퀴즈 화면으로 리디렉션 */}
       <Route path="*" element={<Navigate to="/quiz" replace />} />
     </Routes>
   );

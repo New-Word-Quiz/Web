@@ -1,12 +1,14 @@
+/* 전체 컨테이너: 화면 중앙 정렬 및 배경색 설정 */
 .explain-container {
-  min-height: 100vh;
-  background-color: #6BC2DA;
+  min-height: 100vh; /* 전체 화면 높이 채움 */
+  background-color: #6BC2DA; /* 배경색 */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Noto Sans KR', sans-serif;
+  justify-content: center; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 */
+  font-family: 'Noto Sans KR', sans-serif; /* 폰트 설정 */
 }
 
+/* 카드 박스 스타일 */
 .explain-card {
   width: 355px;
   background-color: white;
@@ -15,16 +17,19 @@
   text-align: center;
 }
 
+/* 제목 텍스트 */
 .explain-title {
   font-size: 24px;
   font-weight: 900;
   margin-bottom: 20px;
 }
 
+/* 각 설명 항목 간 간격 */
 .explain-item {
   margin-bottom: 20px;
 }
 
+/* 각 선택지 제목 (예: 보기 가, 나 등) */
 .explain-option {
   font-size: 18px;
   font-weight: 700;
@@ -32,6 +37,7 @@
   margin-left: 10px;
 }
 
+/* 선택지에 대한 설명 (말풍선처럼 보이게) */
 .explain-bubble {
   background-color: #D5E3F0;
   padding: 14px;
@@ -47,8 +53,9 @@
   margin-right: auto;
 }
 
+/* 뒤로가기 버튼 스타일 */
 .btn-back {
-  background-color: #38ACF4;
+  background-color: #38ACF4; /* 파란색 배경 */
   color: black;
   font-weight: bold;
   font-size: 18px;
@@ -57,18 +64,19 @@
   border-radius: 12px;
   cursor: pointer;
   margin-top: 10px;
-  box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-
-   /* 클릭 효과 추가 */
-  transition: all 0.1s ease-in-out;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* 그림자 효과 */
+  transition: all 0.1s ease-in-out; /* 클릭 애니메이션 */
 }
 
+/* 클릭 효과: 살짝 눌린 듯한 느낌 */
 .btn-back:active {
   transform: scale(0.96);
   box-shadow: none;
 }
 
-/* --- 7. 반응형 설정 --- */
+/* ----------- 반응형 설정 ----------- */
+
+/* 화면 너비 768px 이하 (태블릿 및 소형 화면용) */
 @media (max-width: 768px) {
   .explain-card {
     width: 90%;
@@ -98,6 +106,7 @@
   }
 }
 
+/* 화면 너비 480px 이하 (스마트폰용) */
 @media (max-width: 480px) {
   .explain-card {
     width: 95%;

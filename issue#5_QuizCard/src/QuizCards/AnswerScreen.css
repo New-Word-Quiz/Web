@@ -1,14 +1,16 @@
+/* 전체 화면 배경과 가운데 정렬 설정 */
 .answer-container {
   width: 100vw;
   height: 100vh;
-  background-color: #6BC2DA;
+  background-color: #6BC2DA; /* 하늘색 배경 */
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Noto Sans KR', sans-serif;
-  overflow: hidden; /* 화면 고정 */
+  overflow: hidden; /* 스크롤 방지 */
 }
 
+/* 정답 카드 스타일 */
 .answer-card {
   width: 355px;
   height: 710px;
@@ -21,30 +23,33 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  overflow-y: auto; /* 스크롤 가능하도록 추가 */
-  scrollbar-width: none; /* Firefox */
+  overflow-y: auto; /* 내용이 넘칠 경우 스크롤 가능 */
+  scrollbar-width: none; /* 파이어폭스 스크롤바 제거 */
 }
 
+/* 크롬/사파리용 스크롤바 제거 */
 .answer-card::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none;
 }
 
-/* O or X 스타일 */
+/* 정오답 아이콘 (O/X) */
 .ox-symbol {
   font-size: 72px;
   font-weight: 900;
   margin: 8px auto 0;
 }
 
+/* O (정답) 아이콘 색상 */
 .ox-symbol.circle {
-  color: #2F00FF;
+  color: #2F00FF; /* 파란색 */
 }
 
+/* X (오답) 아이콘 색상 */
 .ox-symbol.cross {
-  color: #E60000;
+  color: #E60000; /* 빨간색 */
 }
 
-/* 결과 텍스트는 항상 검정색 */
+/* 정오답 텍스트 */
 .result-text {
   color: #000;
   font-size: 22px;
@@ -53,7 +58,7 @@
   margin-bottom: 8px;
 }
 
-/* 퀴즈 이미지 */
+/* 퀴즈 이미지 스타일 */
 .quiz-image {
   width: 140px;
   height: 140px;
@@ -62,29 +67,30 @@
   margin: 6px auto 12px;
 }
 
-/* 정답 텍스트 */
+/* '정답:' 라벨 */
 .answer-label {
   font-size: 20px;
   font-weight: 800;
   margin-top: 8px;
 }
 
+/* 실제 정답 텍스트 */
 .answer-text {
   font-size: 30px;
   font-weight: 900;
   margin-bottom: 10px;
 }
 
-/* 섹션 타이틀 */
+/* '의미', '예시' 섹션 제목 */
 .section-title {
   font-size: 22px;
   font-weight: 700;
   margin-top: 10px;
 }
 
-/* 의미/예시 박스 */
+/* 의미/예시 설명 박스 */
 .section-box {
-  background-color: #D5E3F0;
+  background-color: #D5E3F0; /* 연한 파랑 */
   border-radius: 20px;
   padding: 12px;
   margin: 6px auto;
@@ -96,7 +102,7 @@
   box-sizing: border-box;
 }
 
-/* 버튼 영역 */
+/* 버튼들이 정렬되는 그룹 */
 .button-group {
   display: flex;
   justify-content: space-around;
@@ -105,7 +111,7 @@
   padding-bottom: 10px;
 }
 
-/* 버튼 공통 */
+/* 버튼 공통 스타일 */
 .btn {
   width: 80px;
   height: 45px;
@@ -119,26 +125,26 @@
   transition: all 0.1s ease-in-out;
 }
 
-/* 클릭 애니메이션 */
+/* 클릭 시 애니메이션 효과 */
 .btn:active {
   transform: scale(0.96);
   box-shadow: none;
 }
 
-/* 버튼 색상 */
+/* 버튼별 색상 지정 */
 .btn.home {
-  background-color: #F4B938;
+  background-color: #F4B938; /* 주황 */
 }
 
 .btn.next {
-  background-color: #38ACF4;
+  background-color: #38ACF4; /* 파랑 */
 }
 
 .btn.explain {
-  background-color: #82C75E;
+  background-color: #82C75E; /* 초록 */
 }
 
-/* --- 7. 반응형 설정 --- */
+/* --- 반응형: 태블릿 이하 (768px) --- */
 @media (max-width: 768px) {
   .answer-card {
     width: 90%;
@@ -183,6 +189,7 @@
   }
 }
 
+/* --- 반응형: 모바일 이하 (480px) --- */
 @media (max-width: 480px) {
   .answer-card {
     width: 95%;
@@ -226,4 +233,3 @@
     font-size: 15px;
   }
 }
-
