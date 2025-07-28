@@ -1,6 +1,10 @@
 // HomeScreen.jsx
 import React from 'react';
+<<<<<<< HEAD
 // import '../../App.css';
+=======
+import '../App.css';
+>>>>>>> e58edd2 (WIP:로컬 변경사항 저장)
 
 function HomeScreen() {
    return (
