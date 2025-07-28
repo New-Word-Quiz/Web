@@ -8,15 +8,14 @@ import Setting from './Setting/setting.jsx';  //세팅 화면
 
 function App() {
   return (
-    <Router>
+    <>
       <Routes>
         <Route path="/" element={<Scorescreen />} />
-
         <Route path="/home" element={<Home />} />
         <Route path="/quiz" element={<Quizcard />} />
         <Route path="/settings" element={<Setting />} />
       </Routes>
-    </Router>
+    </>
   )
 }
 
