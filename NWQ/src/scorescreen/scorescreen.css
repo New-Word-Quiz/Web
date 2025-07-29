@@ -7,6 +7,8 @@ html,body {
 }
 
 #name-id {
+   border: 1px solid black;
+
    position: absolute;
    z-index: 10;
    width: 346px;
@@ -20,7 +22,7 @@ html,body {
    color: white;
 
       /* 텍스트 외곽선 효과 */
-   text-shadow: 
+   text-shadow:
       3px 0px black,
       -3px 0px black,
       0px -3px black,
@@ -28,10 +30,12 @@ html,body {
       3px 3px black,
       3px -3px black,
       -3px 3px black,
-      -3px -3px black; 
+      -3px -3px black;
 }
 
 #mention {
+   border: 1px solid black;
+   
    position: absolute;
    z-index: 10;
    width: 346px;
@@ -45,7 +49,7 @@ html,body {
    color: white;
 
       /* 텍스트 외곽선 효과 */
-   text-shadow: 
+   text-shadow:
       3px 0px black,
       -3px 0px black,
       0px -3px black,
@@ -53,69 +57,37 @@ html,body {
       3px 3px black,
       3px -3px black,
       -3px 3px black,
-      -3px -3px black; 
+      -3px -3px black;
 }
 
 #now-score{
+   border: 1px solid black;
+
    position: absolute;
    z-index: 10;
-   width: 124px;
-   height: 50px;
-   top: 212px;
-   left: 92px;
-   font-size:100px;
+
    font-weight: 900;
-   text-align: center;
-   line-height: 75px;
    color: black;
 }
 
 #basic-score {
+   border: 1px solid black;
+
    position: absolute;
    z-index: 10;
-   width: 69px;
-   height: 50px;
-   top: 227px;
-   left: 241px;
+
    font-weight: 900;
-   font-size: 30px;
-   text-align: center;
-   line-height: 75px;
    color: black;
-}
-
-#best-score {
-   position: absolute;
-   z-index: 10;
-   width: 346px;
-   height: 50px;
-   top: 297px;
-   left: 28px;
-   font-size:40px;
-   font-weight: 900;
-   text-align: center;
-   line-height: 75px;
-   color: white;
-
-      /* 텍스트 외곽선 효과 */
-   text-shadow: 
-      3px 0px black,
-      -3px 0px black,
-      0px -3px black,
-      0px 3px black,
-      3px 3px black,
-      3px -3px black,
-      -3px 3px black,
-      -3px -3px black; 
 }
 
 .image{
    position: absolute;
-   z-index: 999;
+   transform: translate(-50%, -50%);
+   z-index: 10;
    width: 280px;
-   height: 280px;
-   top: 365px;
-   left: 61px;
+   height: auto;
+   top: 50%;
+   left: 50%;
 }
 
 .retry-button {
@@ -140,7 +112,7 @@ html,body {
    color: white;
 
     /* 텍스트 외곽선 효과 */
-   text-shadow: 
+   text-shadow:
       3px 0px black,
       -3px 0px black,
       0px -3px black,
@@ -148,7 +120,7 @@ html,body {
       3px 3px black,
       3px -3px black,
       -3px 3px black,
-      -3px -3px black; 
+      -3px -3px black;
 }
 
 .home-button {
@@ -174,7 +146,7 @@ html,body {
    color: white;     /* 글씨 색상 */
 
    /* 텍스트 외곽선 효과 */
-   text-shadow: 
+   text-shadow:
       3px 0px black,
       -3px 0px black,
       0px -3px black,
@@ -182,7 +154,7 @@ html,body {
       3px 3px black,
       3px -3px black,
       -3px 3px black,
-      -3px -3px black; 
+      -3px -3px black;
 }
 
 
@@ -192,8 +164,6 @@ html,body {
    width: 120px;
    height: 64px;
    background-color: #82C75E;
-   top: 762px;
-   left: 223px;
    border-radius: 20px;
 
    /* 버튼 효과 */
@@ -204,63 +174,319 @@ html,body {
     /* 텍스트 스타일 */
    font-family: 'Noto Sans KR', sans-serif;    /*폰트*/
    font-weight: 900;     /*굵기*/
-   font-size: 40px;      /*크기*/
-   line-height: 60px;    /*행간*/
    letter-spacing: 2%;   /*자간*/
    color: #ffffff;     /*폰트 색상*/
    text-align: center;   /*위치*/
 
     /* 텍스트 외곽선 효과 */
-   text-shadow: 
+   text-shadow:
       3px 0px black,
       -3px 0px black,
       0px -3px black,
-      0px 3px black,
-      3px 3px black,
-      3px -3px black,
-      -3px 3px black,
-      -3px -3px black; 
-}
+         0px 3px black,
+         3px 3px black,
+         3px -3px black,
+         -3px 3px black,
+         -3px -3px black;
+   }
 
-/*흰 배경 네모*/
-.back-rectangle {
-   width: 355px;   /* 넓이 */
-   height: 827px;  /* 높이 */
-   background-color: white;    /* 배경색*/
-   border-radius: 10px;    /* 반경 */
-   margin: 23px 24px 23px 23px; /* 마진 */
-}
-
-/* 2) 별 아이콘 공통 스타일 */
-.star {
+   /*흰 배경 네모 - 중앙 배치 및 23px 고정 마진 */
+   .back-rectangle {
    position: absolute;
-   width:  var(--size);           /* vw/vh로 크기 반응형 */
-   height: var(--size);
-   background: url("Star.png") no-repeat center / contain;
-   pointer-events: none;          /* 클릭 이벤트 무시 */
-   user-select: none;
+   z-index: 5;
+   top: 23px;
+   bottom: 23px;
+   left: 23px;
+   right: 23px;
+   background-color: white;
+   border-radius: 10px;
+   }
+
+   /* 2) 별 아이콘 공통 스타일 */
+   .star {
+      position: absolute;
+      width:  var(--size);
+      height: var(--size);
+      background: url("Star.png") no-repeat center / contain;
+      pointer-events: none;
+      user-select: none;
+   }
+
+   /* 3) 각 별의 위치·크기 정의 */
+   /* 큰 별 ― 오른쪽 위 모서리에서 살짝 삐져나오게 */
+   .star--big-tr {
+      --size: 400px;
+      top: -78px;
+      left: 242px;
+   }
+
+   /* 큰 별 ― 왼쪽 아래 모서리 */
+   .star--big-bl {
+      --size: 400px;
+      top: 600px;
+      left: -99px;
+   }
+
+   /* 작은 별 */
+   .star--small {
+      --size: 100px;
+      top: 22px;
+      left: -1px;
+   }
+
+   /* 추가 작은 별들을 위한 위치 조정 */
+   .star--small-1 {
+      top: 22px;
+      left: -1px;
+   }
+
+   .star--small-2 {
+      top: 150px;
+      left: 300px;
+   }
+
+   .star--small-3 {
+      top: 500px;
+      left: -50px;
+   }
+
+
+   /* --- 미디어 쿼리 시작: 태블릿 및 큰 모바일 (최대 768px 너비) --- */
+   @media (max-width: 768px) {
+      /* 흰 배경 네모: 중앙 배치 및 23px 고정 마진 유지 */
+      .back-rectangle {
+         top: 23px;
+         bottom: 23px;
+         left: 23px;
+         right: 23px;
+         border-radius: 10px;
+      }
+
+      /* 텍스트 요소들 */
+      #name-id {
+         width: 900;
+         transform: translate(-50%, -50%);
+         left:50%;
+         font-size: 60px;
+         line-height: 75px;
+         text-shadow:
+               0.5vw 0px black, -0.5vw 0px black, 0px -0.5vw black, 0px 0.5vw black,
+               0.5vw 0.5vw black, 0.5vw -0.5vw black, -0.5vw 0.5vw black, -0.5vw -0.5vw black;
+      }
+
+      #mention {
+         transform: translate(-50%, -50%);
+         left:50%;
+         width: 900;
+         margin: 0 auto;
+         font-size: 60px;
+         line-height: 75px;
+         text-shadow:
+               0.5vw 0px black, -0.5vw 0px black, 0px -0.5vw black, 0px 0.5vw black,
+               0.5vw 0.5vw black, 0.5vw -0.5vw black, -0.5vw 0.5vw black, -0.5vw -0.5vw black;
+      }
+
+      #now-score{
+         width: 900;
+         transform: translate(-50%, -50%);
+         left: 45%;
+         top: 30%;
+         font-size: 100px;
+      }
+
+      #basic-score {
+         width: 900;
+         transform: translate(-50%, -50%);
+         left: 65%;
+         top: 30%;
+         font-size: 40px;
+      }
+
+   /* 이미지 */
+   .image{
+      position: absolute;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      width: 35%;
+      height: auto;
+      top: 52%;
+      left: 50%;
+   }
+
+   /* 버튼들 */
+   .retry-button {
+      transform: translate(-50%, -50%);
+      top: 76%;
+      left: 50%;
+
+      width: 80vw;
+      height: 10vh;
+
+      font-size: 50px;
+      line-height: 85px;
+
+      border-radius: 2.5vw;
+      box-shadow:
+         inset 0 0.5vw 0.25vw #FFF58C,
+         0 0.5vw 0.25vw #D68619;
+      text-shadow:
+         0.5vw 0px black, -0.5vw 0px black, 0px -0.5vw black, 0px 0.5vw black,
+         0.5vw 0.5vw black, 0.5vw -0.5vw black, -0.5vw 0.5vw black, -0.5vw -0.5vw black;
+   }
+
+   .home-button, .setting-button {
+      width: 38vw;
+      height: 10vh;
+
+      font-size: 50px;
+      line-height: 85px;
+      text-shadow:
+         0.5vw 0px black, -0.5vw 0px black, 0px -0.5vw black, 0px 0.5vw black,
+         0.5vw 0.5vw black, 0.5vw -0.5vw black, -0.5vw 0.5vw black, -0.5vw -0.5vw black;
+   }
+
+   .home-button {
+      top: 83vh;
+      left: 10vw;
+   }
+
+   .setting-button {
+      top: 83vh;
+      left: 50vw;
+   }
+
+   /* 별 아이콘 */
+   .star--big-tr {
+      --size: 80vw;
+      top: -10vh;
+      left: 50vw;
+   }
+   .star--big-bl {
+      --size: 80vw;
+      top: 70vh;
+      left: -20vw;
+   }
+   .star--small {
+      --size: 20vw;
+   }
+   .star--small-1 {
+      top: 5vh;
+      left: 0vw;
+   }
+   .star--small-2 {
+      top: 18vh;
+      left: 75vw;
+   }
+   .star--small-3 {
+      top: 55vh;
+      left: -8vw;
+   }
 }
 
-/* 3) 각 별의 위치·크기 정의 */
-/* 큰 별 ― 오른쪽 위 모서리에서 살짝 삐져나오게 */
-.star--big-tr {
-   --size: 400px;
-   top: -78px;
-   left: 242px;
+/* --- 미디어 쿼리 시작: 작은 모바일 (최대 480px 너비) --- */
+@media (max-width: 480px) {
+   /* 흰 배경 네모: 중앙 배치 및 23px 고정 마진 유지 */
+   .back-rectangle {
+      top: 23px;
+      bottom: 23px;
+      left: 23px;
+      right: 23px;
+      border-radius: 10px;
+   }
+
+   /* 텍스트 요소들 */
+   #name-id, #mention {
+      display: flex;
+      justify-content: center; /* 수평 중앙 정렬 */
+      align-items: center;    /* 수직 중앙 정렬 */
+      font-size: 40px;
+      line-height: 75px;
+   }
+
+   #now-score {
+      width: 900;
+      transform: translate(-50%, -50%);
+      left: 40%;
+      top: 25%;
+      font-size: 70px;
+   }
+
+   #basic-score {
+      font-size: 4.5vw;
+      line-height: 8.5vh;
+      width: 900;
+      transform: translate(-50%, -50%);
+      left: 65%;
+      top: 25%;
+   }
+
+    /* 이미지 */
+   .image{
+      position: absolute;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      width: 70%;
+      height: auto;
+      top: 50%;
+      left: 50%;
+   }
+
+    /* 버튼들 */
+   .retry-button {
+      width: 240px;
+      height: 10vh;
+      top: 77%;
+      left: 50%;
+      font-size: 40px;
+      line-height: 80px;
+   }
+
+   .home-button, .setting-button {
+      width: 38vw;
+      height: 10vh;
+
+      font-size: 40px;
+      line-height: 80px;
+
+      text-shadow:
+         0.5vw 0px black, -0.5vw 0px black, 0px -0.5vw black, 0px 0.5vw black,
+         0.5vw 0.5vw black, 0.5vw -0.5vw black, -0.5vw 0.5vw black, -0.5vw -0.5vw black;
+   }
+
+   .home-button {
+      top: 85vh;
+      left: 10vw;
+   }
+
+   .setting-button {
+      top: 85vh;
+      left: 52vw;
+   }
+
+   /* 별 아이콘 */
+   .star--big-tr {
+      --size: 70vw;
+      top: -15vh;
+      left: 60vw;
+   }
+   .star--big-bl {
+      --size: 70vw;
+      top: 75vh;
+      left: -10vw;
+   }
+   .star--small {
+      --size: 15vw;
+   }
+   .star--small-1 {
+      top: 7vh;
+      left: 2vw;
+   }
+   .star--small-2 {
+      top: 20vh;
+      left: 70vw;
+   }
+   .star--small-3 {
+      top: 60vh;
+      left: -10vw;
+   }
 }
-
-/* 큰 별 ― 왼쪽 아래 모서리 */
-.star--big-bl {
-   --size: 400px;
-   top: 600px;
-   left: -99px;
-}
-
-/* 작은 별 */
-.star--small {
-   --size: 100px;
-   top: 22px;
-   left: -1px;
-}
-
-
