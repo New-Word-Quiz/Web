@@ -1,0 +1,56 @@
+import React from 'react';
+import tenimg from '../image/만점이요.png';
+import nineimg from '../image/킹갓벽.png';
+import eightimg from '../image/짱짱최고.png';
+import sevenimg from '../image/완전최고.png';
+import siximg from '../image/참잘했어요.png';
+import fiveimg from '../image/죄송하지만.png';
+import fourimg from '../image/이럴순없소.png';
+
+function ScoreImage({score}) {
+   let imageSrc;
+   let altText;
+   let mentionText;
+
+   if(score === 100) {
+      imageSrc = tenimg;
+      altText = "tenimg";
+      mentionText = "아주 훌륭해요!";
+   } else if (score >= 90) {
+      imageSrc = nineimg;
+      altText = "ninimg";
+      mentionText = "아주 훌륭해요!";
+   } else if (score >= 80) {
+      imageSrc = eightimg;
+      altText = "eightimg";
+      mentionText = "아주 훌륭해요!";
+   } else if (score >= 70) {
+      imageSrc = sevenimg;
+      altText = "sevenimg";
+      mentionText = "아주 훌륭해요!";
+   } else if (score >= 60) {
+      imageSrc = siximg;
+      altText = "siximg";
+      mentionText = "아주 훌륭해요!";
+   } else if (score >= 50) {
+      imageSrc = fiveimg;
+      altText = "fiveimg";
+      mentionText = "아주 훌륭해요!";
+   } else {
+      imageSrc = fourimg;
+      altText = "fourimg";
+      mentionText = "아주 훌륭해요!";
+   }
+
+   return (
+      <>
+         {/* 텍스트 렌더링 */}
+         <div id="mention">{mentionText}</div>
+
+         {/* 이미지 렌더링 */}
+         <img className='image' src={imageSrc} alt={altText} />;
+      </>
+   );
+}
+
+export default ScoreImage;
