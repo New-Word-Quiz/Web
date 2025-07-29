@@ -2,13 +2,18 @@ import React, { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { SettingsContext } from '../contexts/SettingsContext.jsx'
 import './SettingsPage.css'
+import { useSound } from '../hooks/UseSound.js'
 
 const SettingsPage = () => {
   // SettingsContext에서 bgmVolume, effectVolume과 해당 값을 변경하는 함수들을 가져옵니다.
   const { bgmVolume, setBgmVolume, effectVolume, setEffectVolume } = useContext(SettingsContext)
+
   // 뒤로가기 네비게이션을 위해 useNavigate 훅을 사용합니다.
   const navigate = useNavigate()
-
+  
+   // Pling Sound.mp3 을 재생할 play 함수
+    const playPling = useSound('/audio/Pling Sound.mp3')
+  
   return (
     <div className="settings-page-view">
       {/* 모바일 프레임을 감싸는 최상위 뷰 */}
@@ -50,17 +55,21 @@ const SettingsPage = () => {
               <label htmlFor="effect" className="setting-label">
                 효과음
               </label>
-              <input
-                id="effect"
-                type="range"
-                min="0"
-                max="1"
-                step="0.01"
-                value={effectVolume}                         // Context로부터 가져온 현재 효과음 볼륨 값
-                onChange={e => setEffectVolume(+e.target.value)} // 슬라이더 변경 시 Context 상태 업데이트
-                className="setting-range effect"
-                style={{ '--value': `${effectVolume * 100}%` }} // CSS 커스텀 프로퍼티로 그라데이션 적용
-              />
+             <input
+         id="effect"
+         type="range"
+          min="0"
+          max="1"
+          step="0.01"
+          value={effectVolume}
+          onChange={e => {
+           const v = +e.target.value;
+            setEffectVolume(v);
+           playPling();      // ← Pling Sound.mp3 재생
+         }}
+           className="setting-range effect"
+           style={{ '--value': `${effectVolume * 100}%` }}
+         /> 
             </section>
           </main>
 
