@@ -1,10 +1,10 @@
 import './NotFoundPage.css'
 import { Routes, Route, Link} from 'react-router-dom';
-import NotFound from "../assets/404NotFound.svg"
+import NotFound from "../../assets/404NotFound.svg"
 export default function NotFoundPage(){
     return(
         <div className='NotFoundPage-screen' >
-            <Link to={'/'} >
+            <Link to={'/'}>
                 <img src={NotFound} alt="" className='NotFoundSVG' />
             </Link>
 
