@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef } from 'react'
-import { SettingsContext } from '../contexts/SettingsContext'
+import { SettingsContext } from '../../src/contexts/SettingsContext'
 
 /**
  * src: 효과음 파일 경로 (public/audio/…)

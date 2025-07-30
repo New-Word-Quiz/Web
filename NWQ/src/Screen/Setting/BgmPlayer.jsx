@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef } from 'react';
-import { SettingsContext } from '../contexts/SettingsContext';
+import { SettingsContext } from '../../contexts/SettingsContext';
 
 const BgmPlayer = ({ src = '/audio/kerning-city.mp3', loop = true }) => {
   const { bgmVolume } = useContext(SettingsContext);

@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { SettingsContext } from '../contexts/SettingsContext.jsx'
+import { SettingsContext } from '../../contexts/SettingsContext.jsx'
 import './SettingsPage.css'
-import { useSound } from '../hooks/UseSound.js'
+import { useSound } from '../../hooks/UseSound.js'
+import PlingSound from '../../assets/audio/Pling-Sound.mp3';
 
 const SettingsPage = () => {
   // SettingsContext에서 bgmVolume, effectVolume과 해당 값을 변경하는 함수들을 가져옵니다.
@@ -12,7 +13,7 @@ const SettingsPage = () => {
   const navigate = useNavigate()
   
    // Pling Sound.mp3 을 재생할 play 함수
-    const playPling = useSound('/audio/Pling Sound.mp3')
+    const playPling = useSound(PlingSound)
   
   return (
     <div className="settings-page-view">
@@ -75,7 +76,7 @@ const SettingsPage = () => {
 
           {/* 카드 하단: 문의사항 페이지로 이동하는 버튼 */}
           <footer className="card-footer">
-            <Link to="/inquiry" className="inquiry-btn">
+            <Link to="/requests" className="inquiry-btn">
               문의사항
             </Link>
           </footer>
