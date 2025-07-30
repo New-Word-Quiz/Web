@@ -15,31 +15,31 @@ function ScoreImage({score}) {
    if(score === 100) {
       imageSrc = tenimg;
       altText = "tenimg";
-      mentionText = "아주 훌륭해요!";
+      mentionText = "대단해! 엄청나!";
    } else if (score >= 90) {
       imageSrc = nineimg;
       altText = "ninimg";
-      mentionText = "아주 훌륭해요!";
+      mentionText = "킹.갓.벽!";
    } else if (score >= 80) {
       imageSrc = eightimg;
       altText = "eightimg";
-      mentionText = "아주 훌륭해요!";
+      mentionText = "짱! 짱! 최고!";
    } else if (score >= 70) {
       imageSrc = sevenimg;
       altText = "sevenimg";
-      mentionText = "아주 훌륭해요!";
+      mentionText = "와! 완전 최고!!";
    } else if (score >= 60) {
       imageSrc = siximg;
       altText = "siximg";
-      mentionText = "아주 훌륭해요!";
+      mentionText = "참! 잘했어요!!";
    } else if (score >= 50) {
       imageSrc = fiveimg;
       altText = "fiveimg";
-      mentionText = "아주 훌륭해요!";
+      mentionText = "우리 한번 더?";
    } else {
       imageSrc = fourimg;
       altText = "fourimg";
-      mentionText = "아주 훌륭해요!";
+      mentionText = "앗! 아쉬워요";
    }
 
    return (

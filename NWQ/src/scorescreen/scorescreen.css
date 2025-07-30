@@ -13,7 +13,7 @@ html,body {
    z-index: 10;
    width: 346px;
    height: 50px;
-   top: 75px;
+   top: 40px;
    left: 28px;
    font-size:40px;
    font-weight: 900;
@@ -38,7 +38,7 @@ html,body {
    
    position: absolute;
    z-index: 10;
-   width: 346px;
+   width: 320px;
    height: 50px;
    top: 100px;
    left: 28px;
@@ -265,9 +265,11 @@ html,body {
       /* 텍스트 요소들 */
       #name-id {
          width: 900;
+         width: 500px;
+         top: 70px;
          transform: translate(-50%, -50%);
          left:50%;
-         font-size: 60px;
+         font-size: 40px;
          line-height: 75px;
          text-shadow:
                0.5vw 0px black, -0.5vw 0px black, 0px -0.5vw black, 0px 0.5vw black,
@@ -277,10 +279,10 @@ html,body {
       #mention {
          transform: translate(-50%, -50%);
          left:50%;
-         top: 150px;
+         top: 120px;
          width: 900;
          margin: 0 auto;
-         font-size: 60px;
+         font-size: 40px;
          line-height: 75px;
          text-shadow:
                0.5vw 0px black, -0.5vw 0px black, 0px -0.5vw black, 0px 0.5vw black,
@@ -292,7 +294,7 @@ html,body {
          transform: translate(-50%, -50%);
          left: 45%;
          top: 28%;
-         font-size: 140px;
+         font-size: 120px;
       }
 
       #basic-score {
@@ -308,7 +310,7 @@ html,body {
       position: absolute;
       transform: translate(-50%, -50%);
       z-index: 10;
-      width: 50%;
+      width: 40%;
       height: auto;
       top: 52%;
       left: 50%;
@@ -324,7 +326,7 @@ html,body {
       height: 10vh;
 
       font-size: 50px;
-      line-height: 110px;
+      line-height: 80px;
 
       border-radius: 2.5vw;
       box-shadow:
@@ -340,7 +342,7 @@ html,body {
       height: 10vh;
 
       font-size: 50px;
-      line-height: 110px;
+      line-height: 85px;
       text-shadow:
          0.5vw 0px black, -0.5vw 0px black, 0px -0.5vw black, 0px 0.5vw black,
          0.5vw 0.5vw black, 0.5vw -0.5vw black, -0.5vw 0.5vw black, -0.5vw -0.5vw black;
@@ -354,33 +356,6 @@ html,body {
    .setting-button {
       top: 83vh;
       left: 50vw;
-   }
-
-   /* 별 아이콘 */
-   .star--big-tr {
-      --size: 80vw;
-      top: -10vh;
-      left: 50vw;
-   }
-   .star--big-bl {
-      --size: 80vw;
-      top: 70vh;
-      left: -20vw;
-   }
-   .star--small {
-      --size: 20vw;
-   }
-   .star--small-1 {
-      top: 5vh;
-      left: 0vw;
-   }
-   .star--small-2 {
-      top: 18vh;
-      left: 75vw;
-   }
-   .star--small-3 {
-      top: 55vh;
-      left: -8vw;
    }
 }
 
@@ -400,12 +375,17 @@ html,body {
       display: flex;
       justify-content: center; /* 수평 중앙 정렬 */
       align-items: center;    /* 수직 중앙 정렬 */
-      font-size: 40px;
-      line-height: 75px;
+      font-size: 35px;
+      line-height: 35px;
    }
 
    #mention {
       top:120px;
+   }
+
+   #name-id {
+      top: 70px;
+      width: 300px;
    }
 
    #now-score {
@@ -466,32 +446,5 @@ html,body {
    .setting-button {
       top: 82vh;
       left: 52vw;
-   }
-
-   /* 별 아이콘 */
-   .star--big-tr {
-      --size: 70vw;
-      top: -15vh;
-      left: 60vw;
-   }
-   .star--big-bl {
-      --size: 70vw;
-      top: 75vh;
-      left: -10vw;
-   }
-   .star--small {
-      --size: 15vw;
-   }
-   .star--small-1 {
-      top: 7vh;
-      left: 2vw;
-   }
-   .star--small-2 {
-      top: 20vh;
-      left: 70vw;
-   }
-   .star--small-3 {
-      top: 60vh;
-      left: -10vw;
    }
 }
