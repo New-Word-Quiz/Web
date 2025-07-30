@@ -26,28 +26,39 @@ function Scorescreen() {
 
             setScore(data.score); // 'score' 필드 사용
             setPlayerName(data.username || "플레이어"); // 'username' 필드 사용 (DTO에 맞춰)
-         })
+         })  /* 에러시 기본 이름"플레이어" 출력  */
          .catch(error => {
             console.error('scorescreen.jsx: 데이터 가져오기 오류:', error);
             setScore(0);
-            setPlayerName("데이터 로드 실패");
+            setPlayerName("플레이어");
          });
 
    }, []);
 
-   // ... (나머지 코드 동일)
    const handleRetryClick = () => { /* */ console.log('다시하기 버튼 클릭'); };
    const handleHomeClick = () =>  { /* */ console.log('홈 버튼 클릭'); };
    const handleSettingClick = () =>  { /* */ console.log('설정 버튼 클릭'); };
 
-   return ( //
+   return ( 
       <>
+         {/* 유저 이름 */}
          <div id="name-id">{playerName}님!</div>
+
+         {/* 현재 점수 */}
          <ScoreImage score={score} />
+
+         {/* 점수 */}
          <div id="now-score">{score}</div>
          <div id="basic-score">/100</div>
-         <Link to="/quiz" className="retry-button" onClick={handleRetryClick}><span>다시하기</span></Link>
+
+         {/* 다시하기 */}
+         <Link to="/quiz" className="retry-button" onClick={handleRetryClick}>
+         <span>다시하기</span></Link>
+
+         {/* 홈으로 이동 */}
          <Link to="/home" className="home-button" onClick={handleHomeClick}><span>홈</span></Link>
+
+         {/* 설정으로 이동 */}
          <Link to="/settings" className="setting-button" onClick={handleSettingClick}><span>설정</span></Link>
          <div className='back-rectangle'></div>
       </>
