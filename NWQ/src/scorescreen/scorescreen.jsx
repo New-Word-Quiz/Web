@@ -26,7 +26,7 @@ function Scorescreen() {
 
             setScore(data.score); // 'score' 필드 사용
             setPlayerName(data.username || "플레이어"); // 'username' 필드 사용 (DTO에 맞춰)
-         })  /* 에러시 기본 이름"플레이어" 출력  */
+         })  /* 에러시 기본 이름"플레이어"  */
          .catch(error => {
             console.error('scorescreen.jsx: 데이터 가져오기 오류:', error);
             setScore(0);
