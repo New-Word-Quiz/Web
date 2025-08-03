@@ -1,329 +1,227 @@
 // src/data/quizData.js
+// 정답·해설 데이터 (meaning, example, explanations) 는 모두 백엔드 DB 에 보관 → 힌트/정답 제출 API 로 내려받아야해서 
+
 const quizData = [
   {
-    id: 1, // 퀴즈 고유 ID
-    image: '/images/quiz1.png', // 퀴즈에 사용될 이미지 경로
-    // 참고로 이미지 파일은 src 폴더 말고 public 폴더에 있음
-    question: '그림이 설명하는 신조어는?', // 퀴즈 질문
-    options: ['점메추', '혼밥', '밥터디', '밥약'], // 보기 항목들
-    answer: '점메추', // 정답
-    meaning: '“점심 메뉴 추천”의 줄임말\n점심메뉴를 추천해 달라고 할 때 쓰이는 표현', // 정답 단어의 의미
-    example: '“오늘 점심으로 뭘 먹을까?\n점메추 좀 해줘”', // 정답 단어를 사용하는 예시 문장
-    explanations: [ // 보기마다의 해설 (보기 순서대로)
-      '점심 메뉴 추천의 줄임말',
-      '혼자 밥을 먹는 사람들을 지칭하는 신조어',
-      '함께 밥을 먹을 사람들을 모아서 밥을 먹는 모임',
-      '밥을 함께 먹자는 약속을 뜻하는 신조어',
-    ],
+    quiz_id: 1,
+    quiz_text: '그림이 설명하는 신조어는?',
+    image_url: '/images/quiz1.png',
+    options: [
+      { option_id: 101, option_text: '점메추' },
+      { option_id: 102, option_text: '혼밥' },
+      { option_id: 103, option_text: '밥터디' },
+      { option_id: 104, option_text: '밥약' }
+    ]
   },
-  // 아래 항목들은 동일한 구조이므로 반복 주석 생략
   {
-    id: 2,
-    image: '/images/quiz2.png', 
-    question: '그림이 설명하는 신조어는?',
-    options: ['넥슨넥카엔', '네카라쿠베당토', '빅테삼', '삼엘하'],
-    answer: '네카라쿠베당토',
-    meaning: '네이버, 카카오, 라인, 쿠팡, 배달의민족, 당근마켓, 토스 를 의미. 국내 IT 대기업들을 줄여서 부르는 신조어',
-    example: '요즘 컴공과 졸업하면 다들 네카라쿠베당토 목표로 준비하더라. 진짜 경쟁 치열함...',
-    explanations: [
-      '국내 주요 게임회사(넥슨, 넷마블, 카카오게임즈, 엔씨소프트)를 묶은 표현',
-      '네이버, 카카오, 라인, 쿠팡, 배달의민족, 당근마켓, 토스 를 의미. 국내 IT 대기업들을 줄여서 부르는 신조어',
-      '빅히트, 테슬라, 삼성전자 (대형 주식 종목 중심)',
-      '삼성전자, LG전자, 하이닉스 (반도체/전자 기업 중심)',
-    ],    
+    quiz_id: 2,
+    quiz_text: '그림이 설명하는 신조어는?',
+    image_url: '/images/quiz2.png',
+    options: [
+      { option_id: 201, option_text: '넥슨넥카엔' },
+      { option_id: 202, option_text: '네카라쿠베당토' },
+      { option_id: 203, option_text: '빅테삼' },
+      { option_id: 204, option_text: '삼엘하' }
+    ]
   },
-
   {
-  id: 3,
-  image: '/images/quiz3.png', 
-  question: '그림이 설명하는 신조어는?',
-  options: ['킹받네', '현타', '억까', '멘붕'],
-  answer: '킹받네',
-  meaning: '“정말 열 받는다”를 과장되게 표현한 신조어\n“킹(king)” + “열받네”의 합성어로, 매우 짜증날 때 유머스럽게 사용',
-  example: '“게임 렉 걸려서 졌어.\n진짜 킹받네;;”',
-  explanations: [
-    '매우 짜증나고 열받을 때 과장된 표현',
-    '현실을 자각하고 허무해질 때 사용하는 신조어',
-    '억지로 비난하는 상황을 표현한 신조어',
-    '멘탈이 붕괴될 정도로 충격을 받은 상황을 표현한 말',
-  ]
-},
-
-{
-  id: 4,
-  image: '/images/quiz4.png', 
-  question: '그림이 설명하는 신조어는?',
-  options: ['구질구질하다', '촌스럽다', '구리다', '짜치다'],
-  answer: '짜치다',
-  meaning: '뭔가 수준 낮고, 없어 보이고, 질이 떨어진다는 의미의 신조어\n주로 패션, 태도, 말투 등이 유치하거나 초라할 때 사용',
-  example: '“짝퉁인데 티 너무 나서 좀 짜치더라 ㅋㅋ”',
-  explanations: [
-    '수준이 낮고 없어 보이며, 초라하고 유치한 느낌을 줄 때 쓰는 신조어',
-    '깔끔하지 못하고 정리가 안 된 상태를 표현하는 일반 표현',
-    '세련되지 않고 옛날 느낌이 나는 스타일을 지칭',
-    '디자인이나 상태가 질 낮고 투박한 느낌을 줄 때 쓰는 단어',
-  ]
-},
-
-{
-  id: 5,
-  image: '/images/quiz5.png',
-  question: '그림이 설명하는 신조어는?',
-  options: ['욜로', '갓생', '소확행', '워라밸'],
-  answer: '소확행',
-  meaning: '“소소하지만 확실한 행복”의 줄임말\n작고 평범하지만 분명하게 느껴지는 일상의 기쁨을 의미',
-  example: '“퇴근하고 조용히 커피 마시면서\n책 읽는 게 내 소확행이야.”',
-  explanations: [
-    'You Only Live Once의 줄임말로, 지금 이 순간의 즐거움을 중시하는 소비 중심 라이프스타일',
-    '자기계발, 건강관리, 생산적인 일상 등 목표 중심의 성실한 삶을 뜻하는 신조어',
-    '작고 일상적인 것에서 느끼는 분명한 행복을 의미하는 말',
-    '일(Work)과 삶(Life)의 균형(Balance)을 중요하게 여기는 삶의 방식',
-  ]
-},
-
-{
-  id: 6,
-  image: '/images/quiz6.png', 
-  question: '그림이 설명하는 신조어는?',
-  options: ['갑분싸', '갑툭튀', '현타', '멘붕'],
-  answer: '갑분싸',
-  meaning: '“어떤 말이나 행동 때문에 갑자기 주변 분위기가 어색해질 때 사용',
-  example: '“다들 웃고 있었는데 걔가 전여친 얘기 꺼내서\n갑분싸 됨 ㅋㅋ”',
-  explanations: [
-    '“갑자기 분위기 싸해짐”의 줄임말로, 예상치 못한 말이나 행동으로 주변이 어색해질 때 사용',
-    '“갑자기 툭 튀어나오다”의 줄임말로, 예상치 못한 등장이나 말이 갑작스러울 때 사용',
-    '“현실 자각 타임”의 줄임말로, 문득 현실을 깨닫고 허무하거나 멘탈이 내려앉는 상태',
-    '“멘탈 붕괴”의 줄임말로, 충격이나 당황스러운 상황에서 정신이 혼란스러운 상태',
-  ]
-},
-
-{
-  id: 7,
-  image: '/images/quiz7.png', 
-  question: '그림이 설명하는 신조어는?',
-  options: ['패피', '얼죽코', '꾸안꾸', '슬세권'],
-  answer: '패피',
-  meaning: '패션에 관심이 많고 옷을 잘 입는 사람을 뜻하는 신조어',
-  example: '“오늘도 옷 잘 입었네~\n역시 패피는 다르다!”',
-  explanations: [
-    '“패션 피플”의 줄임말로, 옷을 잘 입고 스타일 감각이 뛰어난 사람을 뜻함',
-    '“얼어 죽어도 코트”의 줄임말로, 추워도 멋을 위해 코트를 입는 사람',
-    '“꾸민 듯 안 꾸민 듯”의 줄임말로, 자연스럽고 편안하지만 신경 쓴 스타일',
-    '“슬리퍼로 생활권 커버 가능”의 줄임말로, 편의시설이 가까운 동네를 뜻함',
-  ]
-},
-
-{
-  id: 8,
-  image: '/images/quiz8.png', 
-  question: '그림이 설명하는 신조어는?',
-  options: ['찐텐', '오열', '억까', '현타'],
-  answer: '찐텐',
-  meaning: '“진짜 텐션”의 줄임말\n억지나 가식이 아닌 진짜로 들뜬 상태를 의미',
-  example: '“리액션 장난 아니었어 ㅋㅋ\n완전 찐텐이더라”',
-  explanations: [
-    '“진짜 텐션”의 줄임말로, 마음에서 우러나온 진심의 흥분이나 신남',
-    '너무 슬퍼서 참지 못하고 크게 우는 것을 뜻하는 인터넷 표현',
-    '억지로 비난하거나 깎아내리는 행위를 의미하는 말',
-    '현실을 자각하고 허무해지거나 무기력해지는 순간을 뜻하는 표현',
-  ]
-},
-
-{
-  id: 9,
-  image: '/images/quiz9.png', 
-  question: '그림이 설명하는 신조어는?',
-  options: ['댓글부대', '성지순례', '급발진', '드립'],
-  answer: '성지순례',
-  meaning: '과거에 작성된 예언성 댓글이나 게시글이 실제로 일어나 유명해진 경우, 사람들이 찾아가 댓글을 남기는 행위',
-  example: '“이 글 진짜 레전드였네 ㅋㅋ\n성지순례 왔습니다 🙏”',
-  explanations: [
-    '조직적으로 댓글을 달아 여론을 조작하는 집단 또는 사람들',
-    '예언처럼 적중한 글이나 전설적인 게시글을 찾아가 댓글을 다는 문화',
-    '갑자기 과하게 흥분하거나 반응하는 것을 의미하는 표현',
-    '재치 있게 웃긴 말을 하는 인터넷 유머 표현',
-  ]
-},
-
-{
-  id: 10,
-  image: '/images/quiz10.png', 
-  question: '그림이 설명하는 신조어는?',
-  options: ['현웃', '팩폭', '노잼', '뇌절'],
-  answer: '현웃',
-  meaning: '실제로 소리 내어 웃게 되는 상황을 표현하는 신조어',
-  example: '“댓글 보고 진짜 현웃 터짐ㅋㅋㅋ\n너무 웃겨”',
-  explanations: [
-    '“현실 웃음”의 줄임말로, 실제로 웃음이 터질 정도로 웃긴 상황을 표현',
-    '팩트 폭력의 줄임말로, 사실이지만 매우 아프게 찔러 말하는 것',
-    '재미없음을 의미하는 신조어, “노잼”의 줄임말',
-    '말이나 행동을 적당히 멈추지 않고 지나치게 계속하는 것을 뜻하는 표현',
-  ]
-},
-
-{
-  id: 11,
-  image: '/images/quiz11.png', 
-  question: '그림이 설명하는 신조어는?',
-  options: ['내또출', '혼코노', '혼밥', '이생망'],
-  answer: '내또출',
-  meaning: '내일 일정이 있지만 놀러 나가거나 무리할 때 주로 쓰는 표현',
-  example: '“지금 11시인데 나 나감ㅋㅋ\n내또출 각이야”',
-  explanations: [
-    '“내일 또 출근/등교”의 줄임말로, 내일 일정이 있는데도 외출할 때 쓰는 말',
-    '혼자 코인노래방을 즐기는 사람 또는 행위',
-    '혼자 밥을 먹는 행위를 의미하는 신조어',
-    '“이번 생은 망했다”의 줄임말로, 자조적 표현',
-  ]
-},
-
-{
-  id: 12,
-  image: '/images/quiz12.png',
-  question: '그림이 설명하는 신조어는?',
-  options: ['푸드파이터', '소울푸드', 'Sexy Food', '음잘알'],
-  answer: 'Sexy Food',
-  meaning: '비주얼이 너무 좋아서 보는 것만으로도 자극적이고 맛있어 보이는 음식',
-  example: '“이 파스타 비주얼 뭐야…\n완전 Sexy Food다 진짜”',
-  explanations: [
-    '음식을 많이 먹는 사람 또는 그런 콘텐츠를 좋아하는 사람',
-    '마음의 위로가 되는 음식, 추억이 담긴 음식',
-    '비주얼이 자극적이고 먹음직스러워 보는 것만으로도 매력적인 음식',
-    '음식에 대해 잘 아는 사람, 음식 지식이 풍부한 사람',
-  ]
-},
-
-{
-  id: 13,
-  image: '/images/quiz13.png', 
-  question: '그림이 설명하는 신조어는?',
-  options: ['국룰', '암묵적 룰', '노룰', '선넘'],
-  answer: '국룰',
-  meaning: '모두가 당연하게 여기는 기본 규칙이나 불문율을 뜻하는 말',
-  example: '“떡볶이에 튀김은 국룰이지ㅋㅋ”',
-  explanations: [
-    '모두가 당연하게 따르는 기본적인 룰이나 불문율',
-    '말로 하지 않아도 자연스럽게 지켜지는 사회적 규칙',
-    '룰이 없는 자유로운 방식이나 상황을 뜻하는 말',
-    '상대방의 선을 넘거나 무례한 행동을 하는 것을 뜻하는 말',
-  ]
-},
-
-{
-  id: 14,
-  image: '/images/quiz14.png', 
-  question: '그림이 설명하는 신조어는?',
-  options: ['낄끼빠빠', '눈치게임', '존버', '손절'],
-  answer: '낄끼빠빠',
-  meaning: '눈치 있게 행동하라는 뜻의 신조어',
-  example: '“여기 동아리 얘기 중이니까\n낄끼빠빠 하자~”',
-  explanations: [
-    '낄 땐 끼고 빠질 땐 빠지라는 뜻으로, 분위기 파악해서 눈치껏 행동하라는 말',
-    '누가 먼저 나설지 망설이는 상황에서 타이밍을 재는 눈치 싸움',
-    '버티고 기다리는 자세로, 힘든 상황에서도 참으며 기회를 노리는 것',
-    '관계나 상황을 과감히 끊는 것, 더 이상 이어가지 않는 것',
-  ]
-},
-
-{
-  id: 15,
-  image: '/images/quiz15.png', 
-  question: '그림이 설명하는 신조어는?',
-  options: ['넘사벽', '압도적', '갓생', '갑질'],
-  answer: '넘사벽',
-  meaning: '실력, 능력, 인기가 너무 차이 나서 비교 자체가 불가능함을 의미',
-  example: '“연기력은 진짜 넘사벽이다…\n클라스가 달라”',
-  explanations: [
-    '“넘을 수 없는 사차원의 벽”의 줄임말로, 비교 자체가 안 될 정도로 차이가 날 때 쓰는 표현',
-    '상대를 제압하거나 현저하게 뛰어남을 나타내는 일반 표현',
-    '자기관리에 철저하며 계획적으로 사는 이상적인 삶의 태도',
-    '권력이나 위치를 이용해 부당하게 행동하는 것을 뜻하는 단어',
-  ]
-},
-
-{
-  id: 16,
-  image: '/images/quiz16.png', 
-  question: '그림이 설명하는 신조어는?',
-  options: ['머선129', '오우야', '헐', '빼박캔트'],
-  answer: '머선129',
-  meaning: '“무슨 일이야?”를 사투리처럼 재치 있게 표현한 말\n놀랍거나 황당할 때 쓰는 유행어',
-  example: '“야 갑자기 차를 샀다고?\n머선129 ㅋㅋㅋ”',
-  explanations: [
-    '“무슨 일이야?”를 재미있게 표현한 유행어로, 놀라움이나 황당함을 나타낼 때 사용',
-    '놀랍거나 자극적인 상황에서 반응할 때 쓰는 유행어 (“오우야~”)',
-    '충격이나 믿기지 않는 상황에 당황해 할 때 쓰는 감탄 표현',
-    '“빼박(빼도 박도 못하는) + 캔트(can’t)”의 줄임말로, 도저히 빠져나올 수 없는 상황',
-  ]
-},
-
-{
-  id: 17,
-  image: '/images/quiz17.png', 
-  question: '그림이 설명하는 신조어는?',
-  options: ['꾸안꾸', '얼죽코', '패피', '슬세권'],
-  answer: '꾸안꾸',
-  meaning: '자연스럽지만 스타일을 신경 쓴 패션 스타일',
-  example: '“후드에 청바진데 분위기 있음\n완전 꾸안꾸 스타일”',
-  explanations: [
-    '자연스럽지만 센스 있게 스타일링한 패션, “꾸민 듯 안 꾸민 듯”의 줄임말',
-    '“얼어 죽어도 코트”의 줄임말로, 추운 날씨에도 코트를 입는 스타일 고수',
-    '패션 감각이 뛰어나고 스타일리시한 사람, “패션 피플”의 줄임말',
-    '슬리퍼 신고 다닐 수 있을 정도로 편의시설이 잘 갖춰진 생활권',
-  ]
-},
-
-
-{
-  id: 18,
-  image: '/images/quiz18.png', 
-  question: '그림이 설명하는 신조어는?',
-  options: ['썰', '뇌피셜', '팩폭', '사바사'],
-  answer: '뇌피셜',
-  meaning: '사실이 아닌 개인의 추측이나 의견을 말할 때 사용',
-  example: '“그건 그냥 내 뇌피셜이긴 한데...\n맞을 수도 있지 않냐?”',
-  explanations: [
-    '어떤 경험이나 사건에 대해 이야기하는 것, 주로 자극적인 이야기나 루머',
-    '사실이 아닌 개인적인 추측이나 상상으로 만들어낸 의견',
-    '사실을 그대로 말해서 상대에게 상처를 줄 정도의 직설적인 발언',
-    '“사람 by 사람”의 줄임말로, 개인차가 있다는 뜻의 신조어',
-  ]
-},
-
-
-{
-  id: 19,
-  image: '/images/quiz19.png', 
-  question: '그림이 설명하는 신조어는?',
-  options: ['느좋', '반반무많이', '킹정', '스불재'],
-  answer: '느좋',
-  meaning: '처음엔 별로였지만 점점 좋아질 때 사용하는 말',
-  example: '“그 사람 처음엔 별로였는데\n느좋이야 요즘ㅋㅋ”',
-  explanations: [
-    '처음엔 별로였는데 점점 좋아지기 시작할 때 쓰는 표현, “느낌이 좋아”의 줄임말',
-    '반은 반이고 무는 많이, 음식에서 원하는 스타일을 주문할 때 쓰는 표현',
-    '“킹정 = 킹(매우) + 인정”의 줄임말로, 강하게 공감할 때 쓰는 말',
-    '“스스로 불러온 재앙”의 줄임말, 자기 행동 때문에 생긴 문제에 대한 자조적 표현',
-  ]
-},
-
-
-{
-  id: 20,
-  image: '/images/quiz20.png', 
-  question: '그림이 설명하는 신조어는?',
-  options: ['솔까말', '팩폭', '쌉가능', '노잼'],
-  answer: '솔까말',
-  meaning: '직설적이고 솔직하게 자신의 의견을 말할 때 사용',
-  example: '“솔까말 이건 좀 별로다…”',
-  explanations: [
-    '“솔직히 까놓고 말해서”의 줄임말로, 솔직한 의견을 말할 때 사용',
-    '사실을 기반으로 상대에게 직격하는 표현, 사실이지만 상처 줄 수 있음',
-    '“진짜로 가능”이라는 뜻으로, 무언가를 자신 있게 가능하다고 말할 때 사용',
-    '재미없음을 뜻하는 표현, “노잼”의 줄임말',
-  ]
-}
-
+    quiz_id: 3,
+    quiz_text: '그림이 설명하는 신조어는?',
+    image_url: '/images/quiz3.png',
+    options: [
+      { option_id: 301, option_text: '킹받네' },
+      { option_id: 302, option_text: '현타' },
+      { option_id: 303, option_text: '억까' },
+      { option_id: 304, option_text: '멘붕' }
+    ]
+  },
+  {
+    quiz_id: 4,
+    quiz_text: '그림이 설명하는 신조어는?',
+    image_url: '/images/quiz4.png',
+    options: [
+      { option_id: 401, option_text: '구질구질하다' },
+      { option_id: 402, option_text: '촌스럽다' },
+      { option_id: 403, option_text: '구리다' },
+      { option_id: 404, option_text: '짜치다' }
+    ]
+  },
+  {
+    quiz_id: 5,
+    quiz_text: '그림이 설명하는 신조어는?',
+    image_url: '/images/quiz5.png',
+    options: [
+      { option_id: 501, option_text: '욜로' },
+      { option_id: 502, option_text: '갓생' },
+      { option_id: 503, option_text: '소확행' },
+      { option_id: 504, option_text: '워라밸' }
+    ]
+  },
+  {
+    quiz_id: 6,
+    quiz_text: '그림이 설명하는 신조어는?',
+    image_url: '/images/quiz6.png',
+    options: [
+      { option_id: 601, option_text: '갑분싸' },
+      { option_id: 602, option_text: '갑툭튀' },
+      { option_id: 603, option_text: '현타' },
+      { option_id: 604, option_text: '멘붕' }
+    ]
+  },
+  {
+    quiz_id: 7,
+    quiz_text: '그림이 설명하는 신조어는?',
+    image_url: '/images/quiz7.png',
+    options: [
+      { option_id: 701, option_text: '패피' },
+      { option_id: 702, option_text: '얼죽코' },
+      { option_id: 703, option_text: '꾸안꾸' },
+      { option_id: 704, option_text: '슬세권' }
+    ]
+  },
+  {
+    quiz_id: 8,
+    quiz_text: '그림이 설명하는 신조어는?',
+    image_url: '/images/quiz8.png',
+    options: [
+      { option_id: 801, option_text: '찐텐' },
+      { option_id: 802, option_text: '오열' },
+      { option_id: 803, option_text: '억까' },
+      { option_id: 804, option_text: '현타' }
+    ]
+  },
+  {
+    quiz_id: 9,
+    quiz_text: '그림이 설명하는 신조어는?',
+    image_url: '/images/quiz9.png',
+    options: [
+      { option_id: 901, option_text: '댓글부대' },
+      { option_id: 902, option_text: '성지순례' },
+      { option_id: 903, option_text: '급발진' },
+      { option_id: 904, option_text: '드립' }
+    ]
+  },
+  {
+    quiz_id: 10,
+    quiz_text: '그림이 설명하는 신조어는?',
+    image_url: '/images/quiz10.png',
+    options: [
+      { option_id: 1001, option_text: '현웃' },
+      { option_id: 1002, option_text: '팩폭' },
+      { option_id: 1003, option_text: '노잼' },
+      { option_id: 1004, option_text: '뇌절' }
+    ]
+  },
+  {
+    quiz_id: 11,
+    quiz_text: '그림이 설명하는 신조어는?',
+    image_url: '/images/quiz11.png',
+    options: [
+      { option_id: 1101, option_text: '내또출' },
+      { option_id: 1102, option_text: '혼코노' },
+      { option_id: 1103, option_text: '혼밥' },
+      { option_id: 1104, option_text: '이생망' }
+    ]
+  },
+  {
+    quiz_id: 12,
+    quiz_text: '그림이 설명하는 신조어는?',
+    image_url: '/images/quiz12.png',
+    options: [
+      { option_id: 1201, option_text: '푸드파이터' },
+      { option_id: 1202, option_text: '소울푸드' },
+      { option_id: 1203, option_text: 'Sexy Food' },
+      { option_id: 1204, option_text: '음잘알' }
+    ]
+  },
+  {
+    quiz_id: 13,
+    quiz_text: '그림이 설명하는 신조어는?',
+    image_url: '/images/quiz13.png',
+    options: [
+      { option_id: 1301, option_text: '국룰' },
+      { option_id: 1302, option_text: '암묵적 룰' },
+      { option_id: 1303, option_text: '노룰' },
+      { option_id: 1304, option_text: '선넘' }
+    ]
+  },
+  {
+    quiz_id: 14,
+    quiz_text: '그림이 설명하는 신조어는?',
+    image_url: '/images/quiz14.png',
+    options: [
+      { option_id: 1401, option_text: '낄끼빠빠' },
+      { option_id: 1402, option_text: '눈치게임' },
+      { option_id: 1403, option_text: '존버' },
+      { option_id: 1404, option_text: '손절' }
+    ]
+  },
+  {
+    quiz_id: 15,
+    quiz_text: '그림이 설명하는 신조어는?',
+    image_url: '/images/quiz15.png',
+    options: [
+      { option_id: 1501, option_text: '넘사벽' },
+      { option_id: 1502, option_text: '압도적' },
+      { option_id: 1503, option_text: '갓생' },
+      { option_id: 1504, option_text: '갑질' }
+    ]
+  },
+  {
+    quiz_id: 16,
+    quiz_text: '그림이 설명하는 신조어는?',
+    image_url: '/images/quiz16.png',
+    options: [
+      { option_id: 1601, option_text: '머선129' },
+      { option_id: 1602, option_text: '오우야' },
+      { option_id: 1603, option_text: '헐' },
+      { option_id: 1604, option_text: '빼박캔트' }
+    ]
+  },
+  {
+    quiz_id: 17,
+    quiz_text: '그림이 설명하는 신조어는?',
+    image_url: '/images/quiz17.png',
+    options: [
+      { option_id: 1701, option_text: '꾸안꾸' },
+      { option_id: 1702, option_text: '얼죽코' },
+      { option_id: 1703, option_text: '패피' },
+      { option_id: 1704, option_text: '슬세권' }
+    ]
+  },
+  {
+    quiz_id: 18,
+    quiz_text: '그림이 설명하는 신조어는?',
+    image_url: '/images/quiz18.png',
+    options: [
+      { option_id: 1801, option_text: '썰' },
+      { option_id: 1802, option_text: '뇌피셜' },
+      { option_id: 1803, option_text: '팩폭' },
+      { option_id: 1804, option_text: '사바사' }
+    ]
+  },
+  {
+    quiz_id: 19,
+    quiz_text: '그림이 설명하는 신조어는?',
+    image_url: '/images/quiz19.png',
+    options: [
+      { option_id: 1901, option_text: '느좋' },
+      { option_id: 1902, option_text: '반반무많이' },
+      { option_id: 1903, option_text: '킹정' },
+      { option_id: 1904, option_text: '스불재' }
+    ]
+  },
+  {
+    quiz_id: 20,
+    quiz_text: '그림이 설명하는 신조어는?',
+    image_url: '/images/quiz20.png',
+    options: [
+      { option_id: 2001, option_text: '솔까말' },
+      { option_id: 2002, option_text: '팩폭' },
+      { option_id: 2003, option_text: '쌉가능' },
+      { option_id: 2004, option_text: '노잼' }
+    ]
+  }
 ];
 
 export default quizData;
