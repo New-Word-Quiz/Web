@@ -91,6 +91,7 @@ html,body {
 }
 
 .retry-button {
+   text-decoration: none;
    position: absolute;
    z-index: 10;
    width: 280px;
@@ -124,6 +125,7 @@ html,body {
 }
 
 .home-button {
+   text-decoration: none;
    position: absolute;
    z-index: 10;
    width: 120px;
@@ -159,6 +161,7 @@ html,body {
 
 
 .setting-button {
+   text-decoration: none;
    position: absolute;
    z-index: 10;
    width: 120px;
