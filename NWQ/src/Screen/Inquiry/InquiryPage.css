@@ -68,9 +68,9 @@ html, body, #root {
   margin: 8px 0;
   font-size: 18px;
   font-weight: 700;
-  text-decoration: underline;
+  text-decoration: none;
+  color: black;
 }
-
 
 /* InquiryPage.css 끝에 추가 */
 @media (max-width: 768px) {
@@ -91,4 +91,9 @@ html, body, #root {
   .inquiry-card {
     max-width: 200px;
   }
+  .inquiry-email {
+    font-size: 90%;
+    font-weight: 700;
+  }
+
 }
