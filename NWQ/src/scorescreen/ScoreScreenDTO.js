@@ -25,3 +25,4 @@ class ScoreScreenDTO {
 }
 
 export default ScoreScreenDTO;
+

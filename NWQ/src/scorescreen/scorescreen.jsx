@@ -4,10 +4,22 @@ import Star from '../image/Star.png';
 import { Link } from 'react-router-dom';
 import ScoreImage from './scoreimage'; //
 
+import TestDTO from "./testDTO"; //테스트용 더미 데이터
+
 function Scorescreen() {
    const [score, setScore] = useState(0); //
    const [playerName, setPlayerName] = useState("플레이어"); //
 
+   useEffect(() => {
+      // 테스트용 DTO 객체 생성
+      const testData = new TestDTO();
+
+      // DTO에서 값 추출
+      setScore(testData.getScore());
+      setPlayerName(testData.getUsername());
+   }, []); //실제 호출하는 fetch로 변경
+
+   /* 실제 호출하는 fetch
    useEffect(() => {
       // 실제 유저 ID (예: 로그인된 사용자 ID). 일단 1로 고정합니다.
       const userId = 1; 
@@ -20,20 +32,27 @@ function Scorescreen() {
             }
             return res.json(); // 서버에서 받은 JSON 응답을 JavaScript 객체로 변환
          })
-         .then(data => {
-            // 백엔드 ScoreScreenDTO.java의 필드명 (id, username, score)에 맞춰 사용
-            console.log("scorescreen.jsx: 서버로부터 받은 데이터:", data);
+      .then(data => {
+         // 백엔드 ScoreScreenDTO의 필드명에 맞춰 매핑
+         const mappedData = {
+         status: data.id,
+         message: data.message || "",
+         nickname: data.username,
+         score: data.score
+      };
 
-            setScore(data.score); // 'score' 필드 사용
-            setPlayerName(data.username || "플레이어"); // 'username' 필드 사용 (DTO에 맞춰)
-         })  /* 에러시 기본 이름"플레이어"  */
-         .catch(error => {
-            console.error('scorescreen.jsx: 데이터 가져오기 오류:', error);
-            setScore(0);
-            setPlayerName("플레이어");
-         });
+      console.log("서버로부터 받은 매핑된 데이터:", mappedData);
 
-   }, []);
+      setScore(mappedData.score);
+      setPlayerName(mappedData.nickname || "플레이어");
+   })
+   .catch(error => {
+      console.error('데이터 가져오기 오류:', error);
+      setScore(0);
+      setPlayerName("플레이어");
+   });
+}, []);
+*/
 
    const handleRetryClick = () => { /* */ console.log('다시하기 버튼 클릭'); };
    const handleHomeClick = () =>  { /* */ console.log('홈 버튼 클릭'); };
