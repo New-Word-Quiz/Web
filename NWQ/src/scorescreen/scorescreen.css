@@ -7,7 +7,7 @@ html,body {
 }
 
 #name-id {
-   border: 1px solid black;
+   /*border: 1px solid black;*/
 
    position: absolute;
    z-index: 10;
@@ -38,7 +38,7 @@ html,body {
 }
 
 #mention {
-   border: 1px solid black;
+   /*border: 1px solid black;*/
 
    position: absolute;
    z-index: 10;
