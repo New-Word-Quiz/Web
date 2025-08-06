@@ -32,8 +32,10 @@ export function useSound(src) {
       const onFirst = () => {
         audioRef.current.play().catch(() => {})
         window.removeEventListener('pointerdown', onFirst)
+        window.removeEventListener('touchend', onFirst)
       }
       window.addEventListener('pointerdown', onFirst)
+      window.addEventListener('touchend', onFirst)
     })
   }
 

@@ -11,7 +11,7 @@ return (
 
         {/* 시작하기 버튼 */}
         <div className="start-button-group" >
-            <Link to={'/quiz'}>
+            <Link to={'/start'}>
                 <StartBtn/>
             </Link>
         </div>
