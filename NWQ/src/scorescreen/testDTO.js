@@ -1,13 +1,12 @@
-// testDTO.js 파일 (수정 제안)
 class testDTO {
-   constructor(status, message, nickname, score) { // user_id 대신 id, nickname 대신 username
+   constructor(status, message, nickname, score) { 
          this.status = 1;
          this.message = "대단한걸";
          this.nickname = "이게 뭐지";
          this.score = 80;
       }
 
-   status() { // getUserId 대신 getId
+   status() { 
       return this.status;
    }
 
@@ -15,7 +14,7 @@ class testDTO {
       return this.message;
    }
 
-   getUsername() { // getNickname 대신 getUsername
+   getUsername() { 
       return this.nickname;
    }
 

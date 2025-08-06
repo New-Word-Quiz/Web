@@ -1,13 +1,12 @@
-// ScoreScreenDTO.js 파일 (수정 제안)
 class ScoreScreenDTO {
-   constructor(status, message, nickname, score) { // user_id 대신 id, nickname 대신 username
+     constructor(status, message, nickname, score) {
           this.status = status;
           this.message = message;
           this.nickname = nickname;
           this.score = score;
      }
 
-     status() { // getUserId 대신 getId
+     status() {
           return this.status;
      }
 
@@ -15,7 +14,7 @@ class ScoreScreenDTO {
           return this.message;
      }
 
-     getUsername() { // getNickname 대신 getUsername
+     getUsername() {
           return this.nickname;
      }
 

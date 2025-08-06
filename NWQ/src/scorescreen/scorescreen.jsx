@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import ScoreImage from './scoreimage';
 import axios from 'axios';
 
-//import TestDTO from "./testDTO"; //테스트용 더미 데이터
+//import TestDTO from "./testDTO"; //테스트용 더미 데이터 호출용
 
 
 function Scorescreen() {
@@ -55,9 +55,13 @@ function Scorescreen() {
       setPlayerName(testData.getUsername());
    }, []); //실제 호출하는 fetch로 변경
 */
-   const handleRetryClick = () => { /* */ console.log('다시하기 버튼 클릭'); };
-   const handleHomeClick = () =>  { /* */ console.log('홈 버튼 클릭'); };
-   const handleSettingClick = () =>  { /* */ console.log('설정 버튼 클릭'); };
+
+   const handleRetryClick = () => { 
+      console.log('다시하기 버튼 클릭'); };
+   const handleHomeClick = () =>  { 
+      console.log('홈 버튼 클릭'); };
+   const handleSettingClick = () =>  {
+      console.log('설정 버튼 클릭'); };
 
    return ( 
       <>
