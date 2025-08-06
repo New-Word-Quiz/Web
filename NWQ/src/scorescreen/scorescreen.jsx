@@ -2,10 +2,43 @@ import { useState, useEffect } from 'react';
 import './scorescreen.css'; //
 import Star from '../image/Star.png';
 import { Link } from 'react-router-dom';
-import ScoreImage from './scoreimage'; //
+import ScoreImage from './scoreimage';
+import axios from 'axios';
 
 import TestDTO from "./testDTO"; //테스트용 더미 데이터
 
+function Scorescreen() {
+   const [score, setScore] = useState(0); //
+   const [playerName, setPlayerName] = useState("플레이어"); //
+/* fetch에서 axios로 변경 */
+   useEffect(() => {
+      const userId = 1;
+
+      axios.get(`http://localhost:8080/users/${userId}/score/recent`)
+         .then(Response => {
+            const data = Response.data;
+
+            const mappedData = {
+               status: data.id,
+               message: data.message,
+               nickname: data.nickname,
+               score: data.score
+            };
+
+            console.log("서버로부터 받은 매핑된 데이터:", mappedData);
+
+            setScore(mappedData.score);
+            setPlayerName(mappedData.nickname || "플레이어");
+         })
+         .catch(error => {
+            console.error('데이터 가져오기 오류: ',error);
+            setScore(0);
+            setPlayerName("플레이어");
+         });
+   }, []);
+
+
+/* 더미 데이터 호출 용
 function Scorescreen() {
    const [score, setScore] = useState(0); //
    const [playerName, setPlayerName] = useState("플레이어"); //
@@ -18,6 +51,7 @@ function Scorescreen() {
       setScore(testData.getScore());
       setPlayerName(testData.getUsername());
    }, []); //실제 호출하는 fetch로 변경
+*/
 
    /* 실제 호출하는 fetch
    useEffect(() => {
