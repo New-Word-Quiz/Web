@@ -6,19 +6,21 @@ import { useState } from 'react';
 export default function SetNickName() {
     const navigate = useNavigate();
     const [nickname, setNickname] = useState('');  // 닉네임 저장 상태
+        {/*닉네임 전송후 받은 유저ID를 로컬저장소에 저장*/}
+    // const handleSubmit = () => {
+    //     axios.post('http://localhost:5000/user', {
+    //         nickname  // nickname: nickname 과 동일
+    //     })
+    //     .then((response) => {
+    //         console.log('서버 응답:', response.data);
+    //         localStorage.setItem('userID',response.data.session_id)
+    //         navigate('/start/quiz');  // 성공시 이동
 
-    const handleSubmit = () => {
-        axios.post('http://localhost:5000/user', {
-            nickname  // nickname: nickname 과 동일
-        })
-        .then((response) => {
-            console.log('서버 응답:', response.data);
-            navigate('/start/quiz');  // 성공시 이동
-        })
-        .catch((error) => {
-            console.error('에러 발생:', error);  // 에러 처리
-        });
-    };
+    //     })
+    //     .catch((error) => {
+    //         console.error('에러 발생:', error);  // 에러 처리
+    //     });
+    // };
 
     return (
         <div className="nickname-card">
@@ -32,7 +34,13 @@ export default function SetNickName() {
                 onChange={(e) => setNickname(e.target.value)}
                 placeholder="닉네임을 입력하세요"
             />
-            <button type="submit" className="nickname-button" onClick={handleSubmit}>
+            <button type="submit"
+            className="nickname-button" 
+            // onClick={handlesubmit}
+            onClick={()=>{
+                navigate('/start/quiz');
+                console.log(nickname);}}
+            >
                 시작
             </button>
         </div>
