@@ -11,6 +11,7 @@ export default function SetNickName() {
         try {
             await submitNicknameApi(nickname); // API 함수는 요청만 보냄
             navigate('/start/quiz');         // 요청 성공 시, 컴포넌트가 직접 페이지 이동
+            
         } catch (error) {
             console.error(error);
             navigate('/');                   // 요청 실패 시, 컴포넌트가 직접 페이지 이동
