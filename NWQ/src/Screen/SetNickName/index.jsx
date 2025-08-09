@@ -1,26 +1,21 @@
 import { useNavigate } from "react-router-dom";
-import axios from 'axios';
 import './SetNickName.css';
 import { useState } from 'react';
+import {submitNicknameApi} from "../../hooks/useUserSubmit.js";
 
 export default function SetNickName() {
     const navigate = useNavigate();
     const [nickname, setNickname] = useState('');  // 닉네임 저장 상태
-        {/*닉네임 전송후 받은 유저ID를 로컬저장소에 저장*/}
-    // const handleSubmit = () => {
-    //     axios.post('http://localhost:5000/user', {
-    //         nickname  // nickname: nickname 과 동일
-    //     })
-    //     .then((response) => {
-    //         console.log('서버 응답:', response.data);
-    //         localStorage.setItem('userID',response.data.session_id)
-    //         navigate('/start/quiz');  // 성공시 이동
-
-    //     })
-    //     .catch((error) => {
-    //         console.error('에러 발생:', error);  // 에러 처리
-    //     });
-    // };
+        {/*닉네임 전송후 받은 세션 쿠키 저장*/}
+    const handleSubmit = async () => {
+        try {
+            await submitNicknameApi(nickname); // API 함수는 요청만 보냄
+            navigate('/start/quiz');         // 요청 성공 시, 컴포넌트가 직접 페이지 이동
+        } catch (error) {
+            console.error(error);
+            navigate('/');                   // 요청 실패 시, 컴포넌트가 직접 페이지 이동
+        }
+    };
 
     return (
         <div className="nickname-card">
@@ -36,10 +31,10 @@ export default function SetNickName() {
             />
             <button type="submit"
             className="nickname-button" 
-            // onClick={handlesubmit}
-            onClick={()=>{
-                navigate('/start/quiz');
-                console.log(nickname);}}
+            onClick={handleSubmit}
+            // onClick={()=>{
+            //     navigate('/start/quiz');
+            //     console.log(nickname);}}
             >
                 시작
             </button>
