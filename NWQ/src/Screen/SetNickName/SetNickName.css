@@ -40,7 +40,7 @@ cursor: pointer;
 .nickname-title {
 font-size: 24px;
 font-weight: bold;
-margin-bottom: 30px;
+margin-bottom: 15px;
 }
 
 /* 닉네임 입력창 */
@@ -83,4 +83,9 @@ max-width: 250px;
 max-width: 200px;
 }
 
+}
+.errorMSG{
+    color: red;
+    margin-top: 0;
+    padding-top: 0;
 }
