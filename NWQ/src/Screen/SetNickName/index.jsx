@@ -54,7 +54,7 @@ export default function SetNickName() {
                     setNickname(e.target.value);
                     setErrorMSG("");
                 }}
-                placeholder="닉네임을 입력하세요 (1~5자)"
+                placeholder="닉네임을 입력하세요(1~5자)"
             />
             {/*errorMSG가 참 상태일 때만 ErrorMSG 컴포넌트 렌더링 */}
             {errorMSG && <ErrorMSG errorMSG = {errorMSG}/>}
