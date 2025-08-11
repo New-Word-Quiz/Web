@@ -1,7 +1,7 @@
-export default function errorMSG(){
+export default function errorMSG(props){
     return(
         <div>
-            <h6 className="errorMSG">닉네임의 글자수는 5글자 이하로 적어주세요.</h6>
+            <h6 className="errorMSG">{props.errorMSG}</h6>
         </div>
     )
 }
