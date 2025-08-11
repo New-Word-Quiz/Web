@@ -52,11 +52,11 @@ export default function SetNickName() {
                 // ✅ 4. 입력 시 에러 메시지 초기화로 UX 개선
                 onChange={(e) => {
                     setNickname(e.target.value);
-                    setErrorMSG(false);
+                    setErrorMSG("");
                 }}
                 placeholder="닉네임을 입력하세요 (1~5자)"
             />
-            {/* 에러 상태일 때만 ErrorMSG 컴포넌트 렌더링 */}
+            {/*errorMSG가 참 상태일 때만 ErrorMSG 컴포넌트 렌더링 */}
             {errorMSG && <ErrorMSG errorMSG = {errorMSG}/>}
             <button
                 type="submit"
