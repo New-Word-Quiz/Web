@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import './SetNickName.css';
 import { useState } from 'react';
-import { submitNicknameApi } from "../../hooks/useUserSubmit.js";
+import { submitNicknameApi } from "../../api/useUserSubmit.js";
 import ErrorMSG from "../../Components/errorMSG/index.jsx";
 
 export default function SetNickName() {
