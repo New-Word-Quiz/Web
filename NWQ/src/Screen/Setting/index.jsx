@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { SettingsContext } from '../../contexts/SettingsContext.jsx'
 import './SettingsPage.css'
 import { useSound } from '../../hooks/UseSound.js'
-import PlingSound from '../../assets/audio/Pling-Sound.mp3';
+import PlingSound from '/audio/Pling-Sound.mp3';
 
 const SettingsPage = () => {
   // SettingsContext에서 bgmVolume, effectVolume과 해당 값을 변경하는 함수들을 가져옵니다.

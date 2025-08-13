@@ -5,7 +5,7 @@ import App from './App.jsx'
 import { BrowserRouter } from "react-router-dom";
 import { SettingsProvider } from './contexts/SettingsContext.jsx';
 import BgmPlayer from './Screen/Setting/BgmPlayer.jsx';
-import kerningCity from './assets/audio/kerning-city.mp3';
+import kerningCity from '/audio/kerning-city.mp3';
 
 
 
