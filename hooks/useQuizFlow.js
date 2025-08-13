@@ -24,7 +24,7 @@ export function useQuizFlow() {
   // 로딩 상태 관리
   const [loading, setLoading]   = useState(true);
 
-  // ─── 여기가 핵심 ───────────────────────────────────────
+  // ─── 여기가 핵심 ──────────────────────────────────────
   // 컴포넌트 마운트 시 한 번만 Mock API 호출
   useEffect(() => {
     fetchQuizList()
@@ -32,7 +32,7 @@ export function useQuizFlow() {
       .catch(console.error)
       .finally(() => setLoading(false));
   }, []);
-  // ───────────────────────────────────────────────────────
+  // ──────────────────────────────────────────────────────
 
 
   // 로딩 중이라면 아래 값들만 반환(QuizCard.jsx 는 loading 체크 없이도 blank 처리됨)
