@@ -5,6 +5,7 @@ import Home from './Screen/Home'
 import NotFoundPage from './Screen/NotFoundPage'
 import SettingsPage from './Screen/Setting';
 import InquiryPage from './Screen/Inquiry';
+import SetNickName from './Screen/SetNickName';
 function App() {
   return (
     <>
@@ -12,6 +13,8 @@ function App() {
       <Route path = "/" element={<Home/>}/>
       <Route path = "/settings" element={<SettingsPage/>}/>
       <Route path = "/requests" element={<InquiryPage/>}/>
+      <Route path = "/start" element={<SetNickName/>}/>
+      {/* <Route path = "/start/quiz" element={<Quiz/>}/> */}
       <Route path="*" element={<NotFoundPage />}/>
     </Routes>
     </>
